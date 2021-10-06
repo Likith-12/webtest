@@ -1,3 +1,9 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
 session {
     width: 100vw;
     min-height: 100vh;
@@ -17,8 +23,7 @@ session {
     color: white;
 
     .hero {
-        display: flex;
-        justify-content: space-evenly;
+        @include flex;
         align-items: flex-end;
         flex-wrap: wrap;
         width: 500px;
@@ -26,7 +31,41 @@ session {
     }
 
     .hero-text {
-        width: 500px;
+        @include flex;
+        align-items: center;
+        width: fit-content;
+        flex-direction: column;
+        font-weight: bolder;
+        letter-spacing: 12px;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            aspect-ratio: 1/3;
+            grid-template-columns: 20% 70%;
+            letter-spacing: 12px;
+
+            .symbol {
+                h1 {
+                    font-size: 6rem;
+                }
+
+                grid-column: 1/2;
+            }
+
+            .text {
+                @include flex;
+                flex-direction: column;
+                height: fit-content;
+
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 }
 

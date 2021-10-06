@@ -1,14 +1,16 @@
 import React, { useRef, useState, useMemo, useEffect } from 'react'
 import Input from '../components/Input'
 import * as THREE from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
-import Ipf from '../components/Ipf'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+// import Ipf from '../components/Ipf'
+import New from '../components/New'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'
 import about from '../assets/about.jpg';
 import contact from '../assets/contact.jpg';
 import logo from '../assets/ipf_400-100 (1).jpg';
+import { OrbitControls } from '@react-three/drei'
 const Home = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -51,63 +53,48 @@ const Home = () => {
 
         })
     };
-    // const staggerRevealForm = (node1, node2, node3, node4, node) => {
-    //     gsap.from([node1, node2, node3, node4], {
-    //         y: 60,
-    //         duration: 1,
-    //         delay: 0.4,
-    //         opacity: 0,
-    //         ease: 'power3.inOut',
-    //         stagger: {
-    //             amount: 0.1
-    //         },
-    //         scrollTrigger: {
-    //             trigger: node
-    //         }
-
-    //     })
-    // };
-    const Box = (props) => {
-        // This reference will give us direct access to the mesh
-        const mesh = useRef();
-
-        // Set up state for the hovered and active state 
-        const [active, setActive] = useState(false);
-
-        // Rotate mesh every frame, this is outside of React without overhead
-        useFrame(() => {
-            mesh.current.rotation.y -= 0.01;
-        });
-
-        const texture = useMemo(() => new THREE.TextureLoader().load(logo), []);
-
-        return (
-            <mesh
-                {...props}
-                ref={mesh}
-                scale={active ? [2, 2, 2] : [1, 1, 1]}
-                onClick={(e) => setActive(!active)}
-            >
-                <cylinderBufferGeometry args={[1, 1, 4, 60]} />
-                <meshBasicMaterial attach="material" map={texture} toneMapped={false} />
-            </mesh>
-        );
+    function Camera(props) {
+        const ref = useRef()
+        const set = useThree(state => state.set)
+        // Make the camera known to the system
+        useEffect(() => void set({ camera: ref.current }), [])
+        // Update it every frame
+        useFrame(() => ref.current.updateMatrixWorld())
+        return <perspectiveCamera ref={ref} {...props} />
     }
+
     return (
         <div className="home">
             <session className="landing">
                 <div className="hero">
                     <Canvas>
-                        <ambientLight intensity={0.1} />
-                        <pointLight color="blue" intensity={1} position={[10, 10, 10]} />
-                        {/* <Box position={[-2, 0, 0]} /> */}
-                        {/* <Ipf /> */}
-                        <Box position={[0, 1, 0]} />
-                        {/* <Box position={[2, 0, 0]} /> */}
+                        <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
+                        <Camera position={[10, 0, 0]} />
+                        <ambientLight />
+                        {/* <pointLight color="white" intensity={1} position={[0, 15, 15]} />
+                        <pointLight color="white" intensity={1} position={[0, -15, -15]} />
+                        <pointLight color="white" intensity={1} position={[0, 15, -15]} />
+                        <pointLight color="white" intensity={1} position={[0, -15, 15]} /> */}
+                        <pointLight color="white" intensity={1} position={[15, 15, 15]} />
+
+                        <New scale={0.6} position={[0, -3, 0]} />
                     </Canvas>
                 </div>
                 <div className="hero-text">
-                    <h1>INDUSTRIAL AND PLANNING FORUM</h1>
+                    <h1>INDUSTRIAL</h1>
+                    <div className="hero-grid">
+                        <div className="symbol">
+                            <h1>&</h1>
+                        </div>
+                        <div className="text">
+                            <div className="big">
+                                <h1>PLANNING</h1>
+                            </div>
+                            <div className="small">
+                                <h3>FORUM</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </session>
             <session ref={el => { aboutRef = el }} className="about">
