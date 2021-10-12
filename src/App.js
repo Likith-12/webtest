@@ -8,12 +8,23 @@ import Events from './pages/Events';
 import './App.scss';
 import Navbar from './components/Navbar';
 import Admin from './admin/Admin';
+import AnimatedCursor from "react-animated-cursor"
 
 function App() {
 
 
   return (
     <div className="App">
+     
+       <AnimatedCursor
+      innerSize={30}
+      outerSize={15}
+      color='50, 171, 150'
+      outerAlpha={0.5}
+      outerScale={3}
+      trailingSpeed={10}
+      
+    />
       <Router>
         <Navbar />
         <Switch>
