@@ -1,5 +1,6 @@
 import React, { useRef, useState, useMemo, useEffect } from 'react'
 import Input from '../components/Input'
+import Slider from '../pages/Slider'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 // import Ipf from '../components/Ipf'
@@ -108,6 +109,11 @@ const Home = () => {
                     <div ref={el => { aboutInfoRef = el }} className="content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi totam voluptate, error dolores autem quibusdam ut aperiam expedita ullam beatae libero atque molestias est, quas doloremque fuga quidem! Ut illo dolores animi unde incidunt totam voluptatem natus debitis facilis. Quam hic, velit fugit libero placeat reiciendis alias soluta dolorem nemo et, corrupti voluptates veniam perspiciatis, voluptate officia sapiente fuga enim iure. Fuga laboriosam, repudiandae quos sit vel inventore quasi iure, ea incidunt soluta eius necessitatibus deleniti id perferendis, explicabo quisquam cum eum ab! Alias accusamus sint molestiae facilis nam autem corporis rerum, aut voluptas reiciendis, vel iure, explicabo quas debitis.
                     </div>
+                </div>
+            </session>
+            <session>
+                <div>
+                    <Slider></Slider>
                 </div>
             </session>
             <session ref={el => { contactRef = el }} className="contact">
