@@ -111,7 +111,7 @@ const Home = () => {
                     </div>
                 </div>
             </session>
-            <session>
+            <session className="slider">
                 <div>
                     <Slider></Slider>
                 </div>
