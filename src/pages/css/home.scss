@@ -33,10 +33,10 @@ session {
 	margin-bottom: 40px;
 
 	.hero {
-		//@include flex;
-		//display: flex;
-		//align-items: flex-end;
-		//flex-wrap: wrap;
+		@include flex;
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
 		width: 500px;
 		height: 500px;
 	}
