@@ -9,10 +9,13 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/new.gltf')
   const { actions } = useAnimations(animations, group)
+  console.log(actions.action1);
   useEffect(() => {
-    Object.entries(actions).forEach(([key, value]) => {
-      value.play().setEffectiveTimeScale(0.5)
-    });
+    actions.Action1.play()
+    // Object.entries(actions).forEach(([key, value]) => {
+
+    //   value.play().setEffectiveTimeScale(0.5)
+    // });
   })
 
   return (
