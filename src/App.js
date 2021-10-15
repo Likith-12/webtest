@@ -9,13 +9,14 @@ import './App.scss';
 import Navbar from './components/Navbar';
 import Admin from './admin/Admin';
 import AnimatedCursor from "react-animated-cursor"
+import Team from './pages/Team';
 
 function App() {
 
 
   return (
     <div className="App">
-     
+        
        <AnimatedCursor
       innerSize={30}
       outerSize={15}
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/admin">
             <Admin />
+          </Route>
+          <Route path="/team">
+           <Team></Team>
           </Route>
           {/* <Route path="/events">
             <Events />

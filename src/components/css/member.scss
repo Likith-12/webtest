@@ -1,0 +1,55 @@
+.img-container
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    
+    img
+    {
+        width: 100%;
+        height: 100%;
+        margin: 23px;
+        padding: 23px;
+        // border-radius: 50%;
+        
+       
+    }
+    .overlay
+    {
+        margin: 23px;
+        padding: 23px;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      
+        .title
+        {
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+        &:hover
+        {
+            opacity: 1;
+        }
+      .title,.desc
+      {
+          transform: translateY(25px);
+          transition: transform 0.3s;
+      }
+        
+
+    }
+    .overlay:hover> *{
+        transform: translateY(0px);
+
+    }
+}

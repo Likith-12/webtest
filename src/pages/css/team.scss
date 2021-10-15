@@ -1,0 +1,37 @@
+
+h1
+{
+    color: #ffff;
+    text-align: center;
+}
+.grid-container
+{
+
+    display: flex;
+    flex-direction: column;
+   
+    color: white;
+    height: 100vh;
+    overflow-y: scroll;
+    .bottom
+    {
+        margin-bottom: 100px;
+    }
+    
+    .row
+    {
+        display: flex;
+        justify-content: space-around;
+      
+       
+       
+
+    }
+}
+@media only screen and (max-width: 780px) {
+    .row {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
