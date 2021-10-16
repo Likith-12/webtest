@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,KAAK,EAAE,KAAK;CAMf;;AAPD,AAGI,iBAHa,CAGb,KAAK,CAAC;EACF,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI;CAClB",
-    "sources": [
-        "../../src/admin/css/addPost.scss"
-    ],
-    "names": [],
-    "file": "addPost.css"
-}

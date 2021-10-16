@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 // import Ipf from '../components/Ipf'
 import New from '../components/New'
+import Letter  from '../components/Letter'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'
@@ -101,6 +102,11 @@ const Home = () => {
             <session ref={el => { aboutRef = el }} className="about">
                 <div className="heading">
                     <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
+                </div>
+                <div className="logo">
+                  <Letter letter='I'></Letter>
+                  <Letter letter='P'></Letter>
+                  <Letter letter='F'></Letter>
                 </div>
                 <div className="info">
                     <div className="pic">

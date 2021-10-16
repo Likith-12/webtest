@@ -1,15 +1,18 @@
 .img-container
 {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
+    margin: 23px;
+    object-fit: contain;
     
     img
     {
         width: 100%;
         height: 100%;
-        margin: 23px;
-        padding: 23px;
+      
+     
+        // padding: 23px;
         // border-radius: 50%;
         
        
@@ -19,8 +22,8 @@
         margin: 23px;
         padding: 23px;
         position: absolute;
-        top:0;
-        left: 0;
+        top:-23px;
+        left: -23px;
         width: 100%;
         height: 100%;
         background-color: rgba($color: #000000, $alpha: 0.6);

@@ -16,7 +16,7 @@ session {
 .home {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
-	//place-content: center;
+	// place-content: center;
 	//display: flex;
 	//align-items: center;
 	//flex-direction: column;
@@ -87,6 +87,15 @@ session {
 	align-items: center;
 	flex-wrap: wrap;
 	flex-direction: column;
+
+}
+.logo
+{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 23px;
+
 }
 
 .heading {

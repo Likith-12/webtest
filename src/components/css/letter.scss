@@ -1,0 +1,25 @@
+
+.letter
+{
+    position: relative;
+    width: 30vw;
+    height: 50vh;
+    background:#ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+    p
+    {
+        color: transparent ;
+        font-size: 400px;
+        width: 100%;
+        margin: 50%;
+        font-weight: 1000;
+        background-image: linear-gradient(red, yellow, green); //to be replaced with image
+        // backdrop-filter: opacity(0.5);
+        background-clip: text;
+        opacity: 0.5;
+    }
+}
