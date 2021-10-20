@@ -98,11 +98,9 @@ const Home = () => {
                 </div>
             </session>
             <session ref={el => { aboutRef = el }} className="about">
-<<<<<<< HEAD
                
                
                 {/* <div className="info">
-=======
                 <div className="heading">
                     <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
                 </div>
@@ -112,7 +110,6 @@ const Home = () => {
                     <Letter letter='F'></Letter>
                 </div>
                 <div className="info">
->>>>>>> d7cb37e5ea862f874ebca8676b056bf5f6bc78d7
                     <div className="pic">
                         <img ref={el => { aboutImgRef = el }} src={about} alt="" />
                     </div>
