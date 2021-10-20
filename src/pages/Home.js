@@ -4,8 +4,8 @@ import Slider from '../pages/Slider'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 // import Ipf from '../components/Ipf'
-import New from '../components/New'
-import Letter  from '../components/Letter'
+import Logo5 from '../components/Logo5'
+import Letter from '../components/Letter'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'
@@ -13,6 +13,7 @@ import about from '../assets/about.jpg';
 import contact from '../assets/contact.jpg';
 import logo from '../assets/ipf_400-100 (1).jpg';
 import { OrbitControls } from '@react-three/drei'
+import { Suspense } from 'react'
 const Home = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -73,13 +74,10 @@ const Home = () => {
                         <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
                         <Camera position={[10, 0, 0]} />
                         <ambientLight />
-                        {/* <pointLight color="white" intensity={1} position={[0, 15, 15]} />
-                        <pointLight color="white" intensity={1} position={[0, -15, -15]} />
-                        <pointLight color="white" intensity={1} position={[0, 15, -15]} />
-                        <pointLight color="white" intensity={1} position={[0, -15, 15]} /> */}
-                        <pointLight color="white" intensity={1} position={[15, 15, 15]} />
-
-                        <New scale={0.6} position={[0, -3, 0]} />
+                        {/* <pointLight color="white" intensity={1} position={[15, 15, 15]} /> */}
+                        <Suspense fallback={null}>
+                            <Logo5 scale={0.6} position={[0, -3, 0]} />
+                        </Suspense>
                     </Canvas>
                 </div>
                 <div className="hero-text">
@@ -100,9 +98,21 @@ const Home = () => {
                 </div>
             </session>
             <session ref={el => { aboutRef = el }} className="about">
+<<<<<<< HEAD
                
                
                 {/* <div className="info">
+=======
+                <div className="heading">
+                    <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
+                </div>
+                <div className="logo">
+                    <Letter letter='I'></Letter>
+                    <Letter letter='P'></Letter>
+                    <Letter letter='F'></Letter>
+                </div>
+                <div className="info">
+>>>>>>> d7cb37e5ea862f874ebca8676b056bf5f6bc78d7
                     <div className="pic">
                         <img ref={el => { aboutImgRef = el }} src={about} alt="" />
                     </div>
