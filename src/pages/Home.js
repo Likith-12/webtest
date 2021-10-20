@@ -25,8 +25,8 @@ const Home = () => {
     let emailRef = useRef(null)
     let messageRef = useRef(null)
     let btnRef = useRef(null)
-    let aboutImgRef = useRef(null)
-    let aboutInfoRef = useRef(null)
+    // let aboutImgRef = useRef(null)
+    // let aboutInfoRef = useRef(null)
     let aboutRef = useRef(null)
     let aboutHeadRef = useRef(null)
     let contactImgRef = useRef(null)
@@ -36,7 +36,7 @@ const Home = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        staggerReveal(aboutHeadRef, aboutInfoRef, aboutImgRef, aboutRef)
+        staggerReveal(aboutHeadRef, aboutRef)
         staggerReveal(contactHeadRef, contactInfoRef, contactImgRef, contactRef)
         // staggerRevealForm(nameRef, emailRef, messageRef, btnRef, contactRef)
     }, [])
@@ -100,23 +100,25 @@ const Home = () => {
                 </div>
             </session>
             <session ref={el => { aboutRef = el }} className="about">
-                <div className="heading">
-                    <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
-                </div>
-                <div className="logo">
-                  <Letter letter='I'></Letter>
-                  <Letter letter='P'></Letter>
-                  <Letter letter='F'></Letter>
-                </div>
-                <div className="info">
+               
+               
+                {/* <div className="info">
                     <div className="pic">
                         <img ref={el => { aboutImgRef = el }} src={about} alt="" />
                     </div>
                     <div ref={el => { aboutInfoRef = el }} className="content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi totam voluptate, error dolores autem quibusdam ut aperiam expedita ullam beatae libero atque molestias est, quas doloremque fuga quidem! Ut illo dolores animi unde incidunt totam voluptatem natus debitis facilis. Quam hic, velit fugit libero placeat reiciendis alias soluta dolorem nemo et, corrupti voluptates veniam perspiciatis, voluptate officia sapiente fuga enim iure. Fuga laboriosam, repudiandae quos sit vel inventore quasi iure, ea incidunt soluta eius necessitatibus deleniti id perferendis, explicabo quisquam cum eum ab! Alias accusamus sint molestiae facilis nam autem corporis rerum, aut voluptas reiciendis, vel iure, explicabo quas debitis.
                     </div>
-                </div>
+                </div> */}
             </session>
+            <div className="heading">
+                    <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
+                </div>
+            <div className="logo">
+                  <Letter letter='I'></Letter>
+                  <Letter letter='P'></Letter>
+                  <Letter letter='F'></Letter>
+                </div>
             <session className="slider">
                 <div>
                     <Slider></Slider>

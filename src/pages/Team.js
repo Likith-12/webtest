@@ -125,7 +125,7 @@ const Team = () => {
    
       </div>
     <div className="outer-container bottom">
-      <h2><span>SENIOR</span> <span> EXECUTIVES</span></h2>
+      <h2><span>JUNIOR</span> <span> EXECUTIVES</span></h2>
       <div className="grid-container">
        
         <div className="row">

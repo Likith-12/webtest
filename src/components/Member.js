@@ -4,12 +4,14 @@ import './css/member.scss'
 const Member = (props) => {
     return (
         <div>
+            
             <div className="img-container">
-                <img src={props.img__path} alt="" />
                 <div className="overlay">
-                    <div className="title">{props.title}</div>
-                    <p className="desc">{props.desc}</p>
-                </div>
+                    <div className="box"></div>
+                  <div className="arrow"><div className="tail"></div></div>
+               
+            </div>
+                <img src={props.img__path} alt="" />
             </div>
         </div>
     )
