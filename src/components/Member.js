@@ -6,9 +6,15 @@ const Member = (props) => {
         <div>
 
             <div className="img-container">
-                <div className="overlay">
-                    <div className="box"></div>
-                    <div className="arrow">
+                <div className="name" style={{background:props.color==='green'?'green':'red'}}>
+                <span>{props.title}</span>
+                </div>
+                <div className={'overlay '+props.colors}>
+                    <div className='box' style={{background:props.color==='green'?'green':'red'}}>
+                    <i class="far fa-envelope-open"></i>
+                    <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div className='arrow' style={{borderTopColor:props.color==='green'?'green':'red'}}>
                     </div>
 
                 </div>

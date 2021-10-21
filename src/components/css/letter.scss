@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px;
+
     
     p
     {
@@ -21,5 +22,6 @@
         // backdrop-filter: opacity(0.5);
         background-clip: text;
         opacity: 0.5;
+        object-fit: contain;
     }
 }
