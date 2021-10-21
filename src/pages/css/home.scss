@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
+
 @mixin flex {
 	display: flex;
 	justify-content: space-evenly;
@@ -87,18 +89,15 @@ session {
 	align-items: center;
 	flex-wrap: wrap;
 	flex-direction: column;
-
 }
-.logo
-{
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 23px;
-
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .heading {
+	font-size: 40px;
 	color: white;
 }
 
@@ -110,6 +109,8 @@ margin: 23px;
 	flex-direction: row;
 	flex-wrap: wrap;
 	color: white;
+	letter-spacing: 2px;
+	transform: translateY(45%);
 }
 
 .content {
@@ -137,4 +138,34 @@ margin: 23px;
 .contact {
 	margin-top: 40px;
 	margin-bottom: 50px;
+}
+
+/********************************************/
+/*************FOOTER************************/
+/******************************************/
+
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 80vh;
+	position: relative;
+}
+
+.footer_text {
+	color: #fff;
+	font-family: 'Noto Sans Mono';
+	font-size: 40px;
+	font-weight: 900;
+	position: absolute;
+	top: 25vh;
+	left: 10vw;
+}
+
+.footer_copyright {
+	color: #fff;
+	position: absolute;
+	bottom: 80px;
+	left: 40vw;
 }

@@ -28,8 +28,8 @@ const Home = () => {
     let btnRef = useRef(null)
     // let aboutImgRef = useRef(null)
     // let aboutInfoRef = useRef(null)
-    let aboutRef = useRef(null)
-    let aboutHeadRef = useRef(null)
+    // let aboutRef = useRef(null)
+    // let aboutHeadRef = useRef(null)
     let contactImgRef = useRef(null)
     let contactHeadRef = useRef(null)
     let contactInfoRef = useRef(null)
@@ -37,8 +37,8 @@ const Home = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        staggerReveal(aboutHeadRef, aboutRef)
-        staggerReveal(contactHeadRef, contactInfoRef, contactImgRef, contactRef)
+        // staggerReveal(aboutHeadRef, aboutRef)
+        //staggerReveal(contactHeadRef, contactInfoRef, contactImgRef, contactRef)
         // staggerRevealForm(nameRef, emailRef, messageRef, btnRef, contactRef)
     }, [])
     const staggerReveal = (node3, node1, node2, node) => {
@@ -97,41 +97,27 @@ const Home = () => {
                     </div>
                 </div>
             </session>
-            <session ref={el => { aboutRef = el }} className="about">
-               
-               
-                {/* <div className="info">
-                <div className="heading">
-                    <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
-                </div>
-                <div className="logo">
-                    <Letter letter='I'></Letter>
-                    <Letter letter='P'></Letter>
-                    <Letter letter='F'></Letter>
-                </div>
+            <session className="about">
                 <div className="info">
-                    <div className="pic">
-                        <img ref={el => { aboutImgRef = el }} src={about} alt="" />
+                    <div className="heading">
+                        <h1>ABOUT</h1>
                     </div>
-                    <div ref={el => { aboutInfoRef = el }} className="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi totam voluptate, error dolores autem quibusdam ut aperiam expedita ullam beatae libero atque molestias est, quas doloremque fuga quidem! Ut illo dolores animi unde incidunt totam voluptatem natus debitis facilis. Quam hic, velit fugit libero placeat reiciendis alias soluta dolorem nemo et, corrupti voluptates veniam perspiciatis, voluptate officia sapiente fuga enim iure. Fuga laboriosam, repudiandae quos sit vel inventore quasi iure, ea incidunt soluta eius necessitatibus deleniti id perferendis, explicabo quisquam cum eum ab! Alias accusamus sint molestiae facilis nam autem corporis rerum, aut voluptas reiciendis, vel iure, explicabo quas debitis.
-                    </div>
-                </div> */}
+                </div> 
             </session>
-            <div className="heading">
+            {/* <div className="heading">
                     <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
-                </div>
+            </div> */}
             <div className="logo">
-                  <Letter letter='I'></Letter>
-                  <Letter letter='P'></Letter>
-                  <Letter letter='F'></Letter>
-                </div>
+                  <Letter letter='I' ></Letter>
+                  <Letter letter='P' ></Letter>
+                  <Letter letter='F' ></Letter>
+            </div>
             <session className="slider">
                 <div>
                     <Slider></Slider>
                 </div>
             </session>
-            <session ref={el => { contactRef = el }} className="contact">
+            {/* <session ref={el => { contactRef = el }} className="contact">
                 <div className="heading">
                     <h1 ref={el => { contactHeadRef = el }}>Contact us</h1>
                 </div>
@@ -147,6 +133,15 @@ const Home = () => {
                             <button ref={el => { btnRef = el }} className="submit">Submit</button>
                         </form>
                     </div>
+                </div>
+            </session> */}
+            <session className="footer">
+                <div className="footer_text">
+                    <span>FEEL FREE TO HIT US UP</span>
+                </div>
+                <div className="footer_copyright">
+                    <span>Copyright
+                        2021 IPF All Rights Reserved</span>
                 </div>
             </session>
         </div>
