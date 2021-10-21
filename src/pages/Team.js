@@ -15,110 +15,110 @@ const Team = () => {
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-        </div>
-        <div className="row">
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
         </div>
         <div className="row">
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-        </div>
-        <div className="row">
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
         </div>
         <div className="row">
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+        </div>
+        <div className="row">
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+        </div>
+        <div className="row">
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color=''
           ></Member>
         </div>
       </div>
@@ -132,110 +132,110 @@ const Team = () => {
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-        </div>
-        <div className="row">
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
         </div>
         <div className="row">
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-        </div>
-        <div className="row">
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
-          ></Member>
-          <Member
-            title="member1"
-            desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
         </div>
         <div className="row">
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
           <Member
             title="member1"
             desc="about info"
-            img__path="https://source.unsplash.com/random"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+        </div>
+        <div className="row">
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+        </div>
+        <div className="row">
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
+          ></Member>
+          <Member
+            title="member1"
+            desc="about info"
+            img__path="https://source.unsplash.com/random" color='green'
           ></Member>
         </div>
       </div>
