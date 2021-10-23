@@ -1,0 +1,165 @@
+/********************************************/
+/*************FOOTER************************/
+/******************************************/
+
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 70vh;
+	position: relative;
+}
+
+.footer_text {
+	color: #fff;
+	font-family: 'Noto Sans Mono';
+	font-size: 40px;
+	font-weight: 900;
+	position: absolute;
+	bottom: 30vh;
+	left: 10vw;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.footer_text span {
+	margin: 4px;
+}
+.footer_copyright {
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 40vw;
+}
+
+/*************FOOTER_TEXT_ROTATION************************/
+
+.ring {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px solid #000; */
+	bottom: 0;
+	right: -3%;
+}
+
+svg {
+	height: 390px;
+	width: 390px;
+}
+
+svg g text {
+	fill: #fff;
+}
+
+.ring-text-1 {
+	animation: rotate 15s linear infinite;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	font-size: 14px;
+	letter-spacing: 1px;
+	position: absolute;
+	font-weight: 600;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+.footer_image {
+	display: block;
+	border-radius: 80%;
+	width: 100%;
+	height: 240px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.footer_text {
+		font-size: 35px;
+	}
+}
+
+@media only screen and (max-width: 880px) {
+	.footer_text {
+		position: absolute;
+		left: 8vw;
+		font-size: 30px;
+	}
+
+	svg {
+		height: 370px;
+		width: 370px;
+	}
+}
+
+@media only screen and (max-width: 740px) {
+	.footer_text {
+		position: absolute;
+		left: 6vw;
+		font-size: 27px;
+	}
+
+	svg {
+		height: 340px;
+		width: 340px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.footer_text {
+		position: absolute;
+		left: 5vw;
+		font-size: 25px;
+	}
+
+	svg {
+		height: 320px;
+		width: 320px;
+	}
+
+	.footer_image {
+		height: 200px;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.footer_text {
+		position: absolute;
+		left: 4vw;
+		font-size: 23px;
+	}
+
+	svg {
+		height: 310px;
+		width: 310px;
+	}
+
+	.footer_image {
+		height: 200px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.footer_text {
+		position: absolute;
+		bottom: 35vh;
+		left: 5vw;
+		font-size: 23px;
+		display: flex;
+	}
+
+	svg {
+		height: 280px;
+		width: 280px;
+	}
+
+	.footer_image {
+		height: 150px;
+	}
+}

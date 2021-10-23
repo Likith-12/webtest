@@ -1,6 +1,7 @@
 import React, { useRef, useState, useMemo, useEffect } from 'react'
 import Input from '../components/Input'
 import Slider from '../pages/Slider'
+import Footer from '../components/Footer'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 // import Ipf from '../components/Ipf'
@@ -14,6 +15,7 @@ import contact from '../assets/contact.jpg';
 import logo from '../assets/ipf_400-100 (1).jpg';
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
+
 const Home = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -65,7 +67,6 @@ const Home = () => {
         useFrame(() => ref.current.updateMatrixWorld())
         return <perspectiveCamera ref={ref} {...props} />
     }
-
     return (
         <div className="home">
             <session className="landing">
@@ -135,14 +136,8 @@ const Home = () => {
                     </div>
                 </div>
             </session> */}
-            <session className="footer">
-                <div className="footer_text">
-                    <span>FEEL FREE TO HIT US UP</span>
-                </div>
-                <div className="footer_copyright">
-                    <span>Copyright
-                        2021 IPF All Rights Reserved</span>
-                </div>
+            <session>
+                <Footer></Footer>
             </session>
         </div>
     )
