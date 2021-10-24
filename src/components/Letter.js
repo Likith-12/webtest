@@ -1,6 +1,6 @@
 import './css/letter.scss'
 import React from 'react'
-
+import FluidAnimation from 'react-fluid-animation'
 const Letter = (props) => {
     return (
         <div>

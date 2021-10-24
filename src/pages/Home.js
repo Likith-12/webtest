@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo, useEffect } from 'react'
+import React, { useRef, useState, useMemo, useEffect,Component } from 'react'
 import Input from '../components/Input'
 import Slider from '../pages/Slider'
 import Footer from '../components/Footer'
@@ -15,6 +15,7 @@ import contact from '../assets/contact.jpg';
 import logo from '../assets/ipf_400-100 (1).jpg';
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
+import FluidAnimation from 'react-fluid-animation'
 
 const Home = () => {
     const [name, setName] = useState("")
@@ -58,6 +59,7 @@ const Home = () => {
 
         })
     };
+    
     function Camera(props) {
         const ref = useRef()
         const set = useThree(state => state.set)

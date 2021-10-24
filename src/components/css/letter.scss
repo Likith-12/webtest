@@ -8,6 +8,7 @@
 	align-items: center;
 	margin: 20px;
 	margin-bottom: 150px;
+	border-radius: 20px;
 
 	p {
 		background-image: linear-gradient(#ee211e, #000000, #63e0b8);
@@ -70,4 +71,24 @@
 	transform-origin: 50% 50%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+}
+
+@media only screen and (max-width: 1000px) {
+	.letter {
+		width: 25vw;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.letter {
+		width: 35vw;
+		margin: 24px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.letter {
+		width: 45vw;
+		margin: 24px;
+	}
 }
