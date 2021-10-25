@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import Member from "../components/Member";
 import "./css/team.scss";
 
@@ -241,6 +242,7 @@ const Team = () => {
       </div>
    
       </div>
+      <Footer />
     </div>
   );
 };

@@ -16,6 +16,9 @@ import logo from '../assets/ipf_400-100 (1).jpg';
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
 import FluidAnimation from 'react-fluid-animation'
+import "aos/dist/aos.css"
+import Aos from 'aos'
+
 
 const Home = () => {
     const [name, setName] = useState("")
@@ -39,11 +42,7 @@ const Home = () => {
     let contactRef = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
-        // staggerReveal(aboutHeadRef, aboutRef)
-        //staggerReveal(contactHeadRef, contactInfoRef, contactImgRef, contactRef)
-        // staggerRevealForm(nameRef, emailRef, messageRef, btnRef, contactRef)
-    }, [])
+    
     const staggerReveal = (node3, node1, node2, node) => {
         gsap.from([node3, node1, node2], {
             duration: 0.8,
@@ -71,6 +70,7 @@ const Home = () => {
     }
     return (
         <div className="home">
+            
             <session className="landing">
                 <div className="hero">
                     <Canvas>
@@ -111,7 +111,7 @@ const Home = () => {
                     <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
             </div> */}
             <div className="logo">
-                  <Letter letter='I' ></Letter>
+                  <Letter letter='I'></Letter>
                   <Letter letter='P' ></Letter>
                   <Letter letter='F' ></Letter>
             </div>
@@ -141,6 +141,7 @@ const Home = () => {
             <session>
                 <Footer></Footer>
             </session>
+            
         </div>
     )
 }

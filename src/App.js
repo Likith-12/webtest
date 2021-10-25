@@ -47,15 +47,10 @@ function App() {
           <Route path="/team">
            <Team></Team>
           </Route>
-          {/* <Route path="/events">
-            <Events />
-          </Route>
           <Route path="/events">
             <Events />
           </Route>
-          <Route path="/events">
-            <Events />
-          </Route> */}
+          
         </Switch>
       </Router>
     </div>
