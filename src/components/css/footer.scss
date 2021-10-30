@@ -1,6 +1,6 @@
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
-// @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 // /********************************************/
 // /*************FOOTER************************/
 // /******************************************/
@@ -128,12 +128,12 @@
 @media only screen and (max-width: 480px) {
 	.footer_text {
 		position: absolute;
-		bottom: 41vh;
+		bottom: 36vh;
 		left: 4vw;
 		// 	font-size: 27px;
 	}
 	.footer {
-		height: 60vh;
+		height: 55vh;
 	}
 	// .footer_text {
 	// 	position: absolute;

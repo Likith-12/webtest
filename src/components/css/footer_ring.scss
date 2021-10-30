@@ -1,7 +1,7 @@
 /*************FOOTER_TEXT_ROTATION************************/
 .footer_ring {
 	position: absolute;
-	bottom: 10vh;
+	bottom: 0;
 	right: -2%;
 }
 
@@ -73,8 +73,8 @@ svg g text {
 @media only screen and (max-width: 760px) {
 	.footer_ring {
 		position: absolute;
-		bottom: 8vh;
-		right: -6%;
+		bottom: -1%;
+		right: -7%;
 	}
 	svg {
 		height: 340px;
@@ -110,6 +110,11 @@ svg g text {
 }
 
 @media only screen and (max-width: 550px) {
+	.footer_ring {
+		position: absolute;
+		bottom: -1%;
+		right: -5%;
+	}
 	svg {
 		height: 280px;
 		width: 280px;
@@ -123,7 +128,7 @@ svg g text {
 @media only screen and (max-width: 480px) {
 	.footer_ring {
 		position: absolute;
-		bottom: 11vh;
+		bottom: 2vh;
 		right: -6%;
 	}
 	svg {
