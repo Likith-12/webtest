@@ -2,6 +2,7 @@ import React, { useRef, useState, useMemo, useEffect,Component } from 'react'
 import Input from '../components/Input'
 import Slider from '../pages/Slider'
 import Footer from '../components/Footer'
+import Background from '../components/Background'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 // import Ipf from '../components/Ipf'
@@ -71,6 +72,8 @@ const Home = () => {
     }
 
     return (
+        <>
+        <Background/>
         <div className="home" id="home">
             
             <session className="landing">
@@ -141,6 +144,7 @@ const Home = () => {
                 <Footer/>
             </session>
         </div>
+        </>
     )
 }
 export default Home;
