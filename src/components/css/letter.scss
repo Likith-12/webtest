@@ -92,3 +92,14 @@
 		margin: 24px;
 	}
 }
+
+@media only screen and (max-width: 480px) {
+	.letter {
+		width: 45vw;
+		height: 30vh;
+
+		p {
+			font-size: 170px;
+		}
+	}
+}

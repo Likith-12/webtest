@@ -16,18 +16,19 @@ session {
 .home {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
-	// place-content: center;
-	//display: flex;
-	//align-items: center;
-	//flex-direction: column;
+	// // place-content: center;
+	// display: flex;
+	// align-items: center;
+	// flex-direction: column;
 	height: 100vh;
+	width: 100vw;
 	overflow-y: scroll;
 }
 
 .landing {
 	display: flex;
 	justify-content: space-evenly;
-	align-items: center;
+	align-items: start;
 	flex-wrap: wrap;
 	color: white;
 	margin-bottom: 40px;
@@ -35,7 +36,7 @@ session {
 	.hero {
 		@include flex;
 		display: flex;
-		align-items: flex-end;
+		align-items: flex-start;
 		flex-wrap: wrap;
 		width: 500px;
 		height: 500px;
@@ -143,5 +144,32 @@ session {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.landing {
+		.hero {
+			@include flex;
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			width: 300px;
+			height: 300px;
+		}
+		.hero-text {
+			letter-spacing: 9px;
+			h1 {
+				font-size: 2.5rem;
+			}
+			.hero-grid {
+				letter-spacing: 9px;
+				.symbol {
+					h1 {
+						font-size: 5rem;
+					}
+				}
+			}
+		}
 	}
 }

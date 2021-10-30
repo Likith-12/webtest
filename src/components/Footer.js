@@ -1,7 +1,8 @@
 import React from 'react';
 
+import Footer_ring from '../components/Footer_ring'
+
 import './css/footer.scss'
-import logo from '../assets/ipf_400-100 (1).jpg';
 function Footer(){
     return(
         <div className="footer">
@@ -12,23 +13,9 @@ function Footer(){
                     <span>Copyright
                         2021 IPF All Rights Reserved</span>
         </div> */}
-        <div className="footer_ring">
-        <div className="ring">
-            <a href="https://adamgreenough.me/" target="_blank"><img src={logo} className="image-circle footer_image" alt="Adam Greenough - Web Designer & Developer" /></a>
-            <svg className="ring-text-1"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300">
-                <defs>
-                    <path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
-                </defs>
-
-                <g className="group">
-                    <use xlinkHref="#circlePath" fill="none"/>
-                <text fill="#ff00ff">
-                    <textPath xlinkHref="#circlePath">INDUSTRIAL AND PLANNING FORUM ------IPF-------INDUSTRIAL AND PLANNING FORUM------IPF-------</textPath>
-                </text>
-                </g>
-            </svg>
+        <div className="footer_animation_ring">
+        <Footer_ring/>
         </div>
-        </div> 
         </div>
     );
 }

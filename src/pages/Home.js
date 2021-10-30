@@ -42,6 +42,7 @@ const Home = () => {
     let contactRef = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
 
+    const { innerWidth: width, innerHeight: height } = window;
     
     const staggerReveal = (node3, node1, node2, node) => {
         gsap.from([node3, node1, node2], {
@@ -68,8 +69,9 @@ const Home = () => {
         useFrame(() => ref.current.updateMatrixWorld())
         return <perspectiveCamera ref={ref} {...props} />
     }
+
     return (
-        <div className="home">
+        <div className="home" id="home">
             
             <session className="landing">
                 <div className="hero">
@@ -77,13 +79,12 @@ const Home = () => {
                         <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
                         <Camera position={[10, 0, 0]} />
                         <ambientLight />
-                        {/* <pointLight color="white" intensity={1} position={[15, 15, 15]} /> */}
                         <Suspense fallback={null}>
                             <Logo5 scale={0.6} position={[0, -3, 0]} />
                         </Suspense>
                     </Canvas>
                 </div>
-                <div className="hero-text">
+                 <div className="hero-text">
                     <h1>INDUSTRIAL</h1>
                     <div className="hero-grid">
                         <div className="symbol">
@@ -93,7 +94,7 @@ const Home = () => {
                             <div className="big">
                                 <h1>PLANNING</h1>
                             </div>
-                            <div className="small">
+                           <div className="small">
                                 <h3>FORUM</h3>
                             </div>
                         </div>
@@ -115,11 +116,9 @@ const Home = () => {
                   <Letter letter='P' ></Letter>
                   <Letter letter='F' ></Letter>
             </div>
-            <session className="slider">
-                <div>
-                    <Slider></Slider>
-                </div>
-            </session>
+            <div className="slider">
+            <Slider></Slider>
+            </div>
             {/* <session ref={el => { contactRef = el }} className="contact">
                 <div className="heading">
                     <h1 ref={el => { contactHeadRef = el }}>Contact us</h1>
@@ -139,9 +138,8 @@ const Home = () => {
                 </div>
             </session> */}
             <session>
-                <Footer></Footer>
+                <Footer/>
             </session>
-            
         </div>
     )
 }
