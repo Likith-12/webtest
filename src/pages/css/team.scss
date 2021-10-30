@@ -1,15 +1,17 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
 h1 {
   color: #ffff;
   text-align: center;
 }
+
 .wrapper {
   height: 100vh;
   overflow-y: scroll;
 }
+
 .outer-container {
   display: flex;
   margin: 30px;
@@ -38,6 +40,7 @@ h1 {
     }
   }
 }
+
 .grid-container {
   display: flex;
   flex-direction: column;
@@ -59,28 +62,33 @@ h1 {
     justify-content: space-around;
   }
 }
+
 .bottom {
   margin-bottom: 100px;
 }
+
 @media only screen and (max-width: 1100px) {
   .row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .grid-container {
     width: 80vw;
     right: 80px;
 
   }
-   .outer-container h2 {
+
+  .outer-container h2 {
     position: relative;
     right: 3vw;
   }
-  
+
 }
+
 // @media only screen and (max-width: 1100px) and( min-width:800px) {
-  
+
 //   // .outer-container h2 {
 //   //   position: relative;
 //   //   right: 0.5v;

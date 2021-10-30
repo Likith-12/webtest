@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-/********************************************/
-/*************FOOTER************************/
-/******************************************/
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+Mono:wght@400;500;600;700;800;900&display=swap');
+// @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+// /********************************************/
+// /*************FOOTER************************/
+// /******************************************/
 
 .footer {
 	display: flex;
@@ -48,10 +48,12 @@
 		80% {
 			letter-spacing: 8px;
 		}
+
 		100% {
 			background-size: 300% 300%;
 		}
 	}
+
 	@keyframes glow {
 		40% {
 			text-shadow: 0 0 8px #fff;
@@ -87,6 +89,7 @@
 		left: 4vw;
 	}
 }
+
 @media only screen and (max-width: 680px) {
 	.footer_text {
 		position: absolute;
@@ -95,6 +98,7 @@
 		// 	font-size: 27px;
 	}
 }
+
 @media only screen and (max-width: 640px) {
 	.footer_text {
 		position: absolute;

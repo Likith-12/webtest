@@ -30,7 +30,7 @@ const Blogs = () => {
                 {blogs.map((post) => {
                     return (
                         <Link to={`/blog/${post.slug}`}>
-                            <Card key={post.slug} post={post} />
+                            <Card key={post.slug} data={post} />
                         </Link>
                     )
                 }

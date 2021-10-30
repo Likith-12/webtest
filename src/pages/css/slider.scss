@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// }
 
-body {
-	font-family: 'Muli', sans-serif;
-	overflow: hidden;
-	margin: 0;
-	background: rgb(18, 13, 29);
-	height: 100vh;
-	display: flex;
-}
+// body {
+// 	font-family: 'Muli', sans-serif;
+// 	// overflow: hidden;
+// 	margin: 0;
+// 	background: rgb(18, 13, 29);
+// 	height: 100vh;
+// 	display: flex;
+// }
 
 .container {
 	width: 100vw;
@@ -234,16 +234,20 @@ body {
 
 	.slide_1 {
 		width: 93vw;
+
 		.slide_event_1 a {
 			padding-left: 6px;
 		}
 	}
+
 	.slide_2 {
 		width: 97vw;
+
 		.slide_event_2 a {
 			padding-left: 6px;
 		}
 	}
+
 	.slide_event_3 a {
 		padding-left: 6px;
 	}
@@ -256,6 +260,7 @@ body {
 
 	.slide_1 {
 		width: 92vw;
+
 		.slide_event_1 a {
 			padding-left: 6px;
 		}
@@ -265,8 +270,10 @@ body {
 		width: 4vw;
 		transition: all 500ms ease-in-out;
 	}
+
 	.slide_2 {
 		width: 96vw;
+
 		.slide_event_2 a {
 			padding-left: 6px;
 		}
@@ -289,6 +296,7 @@ body {
 
 	.slide_1 {
 		width: 92vw;
+
 		.slide_event_1 a {
 			padding-left: 6px;
 		}
@@ -301,6 +309,7 @@ body {
 
 	.slide_2 {
 		width: 96vw;
+
 		.slide_event_2 a {
 			padding-left: 6px;
 		}
@@ -323,6 +332,7 @@ body {
 
 	.slide_1 {
 		width: 90vw;
+
 		.slide_event_1 a {
 			padding-left: 6px;
 		}
@@ -332,8 +342,10 @@ body {
 		width: 6vw;
 		transition: all 500ms ease-in-out;
 	}
+
 	.slide_2 {
 		width: 95vw;
+
 		.slide_event_2 a {
 			padding-left: 6px;
 		}
@@ -356,6 +368,7 @@ body {
 
 	.slide_1 {
 		width: 88vw;
+
 		.slide_event_1 a {
 			padding-left: 6px;
 		}
@@ -368,6 +381,7 @@ body {
 
 	.slide_2 {
 		width: 94vw;
+
 		.slide_event_2 a {
 			padding-left: 6px;
 		}
@@ -391,7 +405,7 @@ body {
 
 	body {
 		font-family: 'Muli', sans-serif;
-		overflow: hidden;
+		// overflow: hidden;
 		margin: 0;
 		background: rgb(18, 13, 29);
 		height: 100vh;
