@@ -23,8 +23,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-scroll-motion": "^0.2.1",
+    "react-vanilla-tilt": "^1.0.0",
     "svg-inline-react": "^3.2.1",
     "three": "^0.129.0",
+    "vanilla-tilt": "^1.7.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
