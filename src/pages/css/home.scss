@@ -51,7 +51,7 @@ session {
 		letter-spacing: 12px;
 
 		h1 {
-			font-size: 4rem;
+			font-size: 5rem;
 		}
 
 		.hero-grid {
@@ -144,6 +144,14 @@ session {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+	}
+
+	.landing{
+		.hero-text{
+			h1{
+				font-size: 4rem;
+			}
+		}
 	}
 }
 

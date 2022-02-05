@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
+    "caniuse-lite": "^1.0.30001307",
     "firebase": "^8.9.1",
     "gsap": "^3.7.1",
     "node-sass": "^6.0.1",
