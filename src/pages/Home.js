@@ -9,7 +9,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'
 import about from '../assets/about.jpg';
 import contact from '../assets/contact.jpg';
-import logo from '../assets/ipf_400-100 (1).jpg';
+import logo from '../assets/logo.png';
+import arrow1 from '../assets/arrow1.png';
+import arrow2 from '../assets/arrow2.png';
+import arrow3 from '../assets/arrow3.png';
 import { OrbitControls } from '@react-three/drei'
 const Home = () => {
     const [name, setName] = useState("")
@@ -28,6 +31,10 @@ const Home = () => {
     let aboutRef = useRef(null)
     let aboutHeadRef = useRef(null)
     let contactImgRef = useRef(null)
+    let logoImgRef = useRef(null)
+    let arrow1ImgRef = useRef(null)
+    let arrow2ImgRef = useRef(null)
+    let arrow3ImgRef = useRef(null)
     let contactHeadRef = useRef(null)
     let contactInfoRef = useRef(null)
     let contactRef = useRef(null)
@@ -97,6 +104,22 @@ const Home = () => {
                     </div>
                 </div>
             </session>
+            <div className='logo'>
+                    <div className='ipf-logo'>
+                        <img ref={el => { logoImgRef = el }} src={logo} alt="" />
+                    </div>
+                    <div className="arrows">
+                    <div className='arrow1'>
+                        <img ref={el => { arrow1ImgRef = el }} src={arrow1} alt="" />
+                    </div>
+                    <div className='arrow2'>
+                        <img ref={el => { arrow2ImgRef = el }} src={arrow3} alt="" />
+                    </div>
+                    <div className='arrow3'>
+                        <img ref={el => { arrow3ImgRef = el }} src={arrow2} alt="" />
+                    </div>
+                    </div>
+            </div>
             <session ref={el => { aboutRef = el }} className="about">
                 <div className="heading">
                     <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
