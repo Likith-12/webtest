@@ -1,5 +1,5 @@
-import InstaCards from '../components/InstaCards';
-import React from "react";
+import InstaCards from '../components/InstaCards.js';
+
 
 function Series() {
   return (

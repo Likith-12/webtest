@@ -8,26 +8,27 @@ body {
 a {
     text-decoration: none;
 }
-.card-list {
+.cardlists {
     display: flex;
+    flex-direction: row;
     padding: 3rem;
     overflow-x: scroll;
 }
-.card-list::-webkit-scrollbar {
+.cardlists ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
-.card-list::-webkit-scrollbar-thumb {
+.cardlists ::-webkit-scrollbar-thumb {
     background: #201c29;
     border-radius: 10px;
     box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
 }
-.card-list::-webkit-scrollbar-track {
+.cardlists ::-webkit-scrollbar-track {
     background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
 }
-.card {
-    height: 350px;
-    width: 400px;
+.cards {
+    height: 400px;
+    width: 750px;
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
@@ -41,12 +42,12 @@ a {
     clear: both;
     position: relative;
 }
-.card:focus-within~.card, .card:hover~.card {
-    transform: translateX(260px);
+.cards:focus-within~.cards, .cards:hover~.cards {
+    transform: translateX(320px);
 }
-.card:hover {
+.cards:hover {
     transform: translateY(-1.5rem);
 }
-.card:not(:first-child) {
+.cards:not(:first-child) {
     margin-left: -130px;
 }

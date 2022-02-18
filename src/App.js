@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import AnimatedCursor from "react-animated-cursor"
 import Team from './pages/Team';
 import Serieses from './pages/Serieses';
+import Series from './pages/Series';
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/serieses">
             <Serieses />
+          </Route>
+          <Route path="/series">
+            <Series></Series>
           </Route>
 
         </Switch>
