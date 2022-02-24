@@ -1,14 +1,14 @@
 import './css/instacards.scss'
 
-function InstaCards(){
-    return(
+function InstaCards() {
+    return (
         <section className="cardlists">
             <article className="cards">
-            <div>
-                <iframe src="https://www.instagram.com/p/CQD1migDV6m/embed" width="400" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <div>
+                    <iframe src="https://www.instagram.com/p/CQD1migDV6m/embed" width="400" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 </div>
             </article>
-            <article className="cards">
+            {/* <article className="cards">
             <div>
                 <iframe src="https://www.instagram.com/p/CQTUHv7jMr6/embed" width="400" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 </div>
@@ -42,7 +42,7 @@ function InstaCards(){
                 <div>
                 <iframe src="https://www.instagram.com/p/CO2qq5yjcMj/embed" width="400" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 </div>
-            </article>
+            </article> */}
         </section>
     );
 }
