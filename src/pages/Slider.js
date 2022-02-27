@@ -76,7 +76,7 @@ function Slider(){
 
 
   return(
-  <div className="container">
+  <div className="container_slider">
     <div className="slide slide_3">
       <div className="slide_event_3">  
           <a id="event_3" onClick={slide_three}>

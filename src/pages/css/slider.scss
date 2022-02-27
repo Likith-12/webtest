@@ -15,7 +15,7 @@
 // 	display: flex;
 // }
 
-.container {
+.container_slider {
 	width: 100vw;
 	display: flex;
 }
@@ -135,6 +135,7 @@
 	z-index: 10;
 
 	a {
+		color: #080707;
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -181,13 +182,17 @@
 	}
 }
 
+.slide_event_2 a:hover {
+	color: #b6a5a5;
+}
+
 /*******************************************/
 /***************Slide_3********************/
 /******************************************/
 
 .slide_3 {
 	height: 100vh;
-	//width: 100vw;
+	width: 100vw;
 	color: #eeeeee;
 	background-color: #1c7947;
 	flex: 10;
