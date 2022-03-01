@@ -1,0 +1,96 @@
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
+h1 {
+  color: #ffff;
+  text-align: center;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.outer-container {
+  display: flex;
+  margin: 30px;
+  padding: 20px 0;
+  border: 2px dashed rgba($color: #ffff, $alpha: 0.4);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  justify-content: center;
+
+  h2 {
+    transform: rotate(270deg);
+    padding: 0;
+    margin: 0;
+
+    color: #ffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+
+    position: relative;
+    right: 50px;
+
+    span {
+      margin: 5px;
+    }
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+
+  color: white;
+  overflow-x: visible;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+  right: 110px;
+
+  .bottom {
+    margin-bottom: 100px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.bottom {
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container {
+    width: 80vw;
+    right: 80px;
+
+  }
+
+  .outer-container h2 {
+    position: relative;
+    right: 3vw;
+  }
+
+}
+
+// @media only screen and (max-width: 1100px) and( min-width:800px) {
+
+//   // .outer-container h2 {
+//   //   position: relative;
+//   //   right: 0.5v;
+//   // }
+// }

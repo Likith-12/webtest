@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: 'DM Mono', monospace;
+}
+a {
+    text-decoration: none;
+}
+.cardlists {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+.cardlists ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.cardlists ::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+.cardlists ::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+.cards {
+    height: 400px;
+    width: 750px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+.cards:focus-within~.cards, .cards:hover~.cards {
+    transform: translateX(320px);
+}
+.cards:hover {
+    transform: translateY(-1.5rem);
+}
+.cards:not(:first-child) {
+    margin-left: -130px;
+}

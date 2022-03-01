@@ -4,16 +4,27 @@ import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Blog from './pages/Blog';
 import Events from './pages/Events';
-// import AddPost from './admin/AddPost';
 import './App.scss';
 import Navbar from './components/Navbar';
-import Admin from './admin/Admin';
+import AnimatedCursor from "react-animated-cursor"
+import Team from './pages/Team';
+import Series from './pages/Series';
 
 function App() {
 
 
   return (
     <div className="App">
+
+      <AnimatedCursor
+        innerSize={30}
+        outerSize={15}
+        color='50, 171, 150'
+        outerAlpha={0.5}
+        outerScale={3}
+        trailingSpeed={10}
+
+      />
       <Router>
         <Navbar />
         <Switch>
@@ -29,18 +40,13 @@ function App() {
           <Route path="/events">
             <Events />
           </Route>
-          <Route path="/admin">
-            <Admin />
+          <Route path="/team">
+            <Team />
           </Route>
-          {/* <Route path="/events">
-            <Events />
+          <Route path="/series">
+            <Series />
           </Route>
-          <Route path="/events">
-            <Events />
-          </Route>
-          <Route path="/events">
-            <Events />
-          </Route> */}
+
         </Switch>
       </Router>
     </div>

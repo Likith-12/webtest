@@ -90,7 +90,7 @@ const BurgerMenu = ({ state }) => {
                                     <Link to="/about" ref={el => { line2 = el }}>Blogs</Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" ref={el => { line3 = el }}>Events</Link>
+                                    <Link to="/Events" ref={el => { line3 = el }}>Events</Link>
                                 </li>
                                 <li>
                                     <Link to="/about" ref={el => { line4 = el }}>Contact</Link>
@@ -100,10 +100,10 @@ const BurgerMenu = ({ state }) => {
                     </div>
                     <div ref={el => { socialMedia = el }} className="social-media">
                         {/* <h3>Follow us on:</h3> */}
-                        <a ref={el => { link1 = el }}>Instagram</a>
-                        <a ref={el => { link2 = el }}>Facebook</a>
-                        <a ref={el => { link3 = el }}>Twitter</a>
-                        <a ref={el => { link4 = el }}>LinkedIn</a>
+                        <a ref={el => { link1 = el }}><i className="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a ref={el => { link2 = el }}><i className="fa-brands fa-facebook fa-2xl"></i></a>
+                        <a ref={el => { link3 = el }}><i className="fa-brands fa-twitter fa-2xl"></i></a>
+                        <a ref={el => { link4 = el }}><i className="fa-brands fa-linkedin fa-2xl"></i></a>
                     </div>
                 </div>
             </div>

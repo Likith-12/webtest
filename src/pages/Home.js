@@ -1,9 +1,13 @@
-import React, { useRef, useState, useMemo, useEffect } from 'react'
+import React, { useRef, useState, useMemo, useEffect,Component } from 'react'
 import Input from '../components/Input'
+import Slider from '../pages/Slider'
+import Footer from '../components/Footer'
+import Background from '../components/Background'
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 // import Ipf from '../components/Ipf'
-import New from '../components/New'
+import Logo5 from '../components/Logo5'
+import Letter from '../components/Letter'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'
@@ -14,6 +18,12 @@ import arrow1 from '../assets/arrow1.png';
 import arrow2 from '../assets/arrow2.png';
 import arrow3 from '../assets/arrow3.png';
 import { OrbitControls } from '@react-three/drei'
+import { Suspense } from 'react'
+import FluidAnimation from 'react-fluid-animation'
+import "aos/dist/aos.css"
+import Aos from 'aos'
+
+
 const Home = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -26,10 +36,10 @@ const Home = () => {
     let emailRef = useRef(null)
     let messageRef = useRef(null)
     let btnRef = useRef(null)
-    let aboutImgRef = useRef(null)
-    let aboutInfoRef = useRef(null)
-    let aboutRef = useRef(null)
-    let aboutHeadRef = useRef(null)
+    // let aboutImgRef = useRef(null)
+    // let aboutInfoRef = useRef(null)
+     let aboutRef = useRef(null)
+     let aboutHeadRef = useRef(null)
     let contactImgRef = useRef(null)
     let logoImgRef = useRef(null)
     let arrow1ImgRef = useRef(null)
@@ -40,11 +50,8 @@ const Home = () => {
     let contactRef = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
 
-    useEffect(() => {
-        staggerReveal(aboutHeadRef, aboutInfoRef, aboutImgRef, aboutRef)
-        staggerReveal(contactHeadRef, contactInfoRef, contactImgRef, contactRef)
-        // staggerRevealForm(nameRef, emailRef, messageRef, btnRef, contactRef)
-    }, [])
+    const { innerWidth: width, innerHeight: height } = window;
+    
     const staggerReveal = (node3, node1, node2, node) => {
         gsap.from([node3, node1, node2], {
             duration: 0.8,
@@ -60,6 +67,7 @@ const Home = () => {
 
         })
     };
+    
     function Camera(props) {
         const ref = useRef()
         const set = useThree(state => state.set)
@@ -71,23 +79,22 @@ const Home = () => {
     }
 
     return (
-        <div className="home">
+        <>
+        <Background/>
+        <div className="home" id="home">
+            
             <session className="landing">
                 <div className="hero">
                     <Canvas>
                         <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
                         <Camera position={[10, 0, 0]} />
                         <ambientLight />
-                        {/* <pointLight color="white" intensity={1} position={[0, 15, 15]} />
-                        <pointLight color="white" intensity={1} position={[0, -15, -15]} />
-                        <pointLight color="white" intensity={1} position={[0, 15, -15]} />
-                        <pointLight color="white" intensity={1} position={[0, -15, 15]} /> */}
-                        <pointLight color="white" intensity={1} position={[15, 15, 15]} />
-
-                        <New scale={0.6} position={[0, -3, 0]} />
+                        <Suspense fallback={null}>
+                            <Logo5 scale={0.6} position={[0, -3, 0]} />
+                        </Suspense>
                     </Canvas>
                 </div>
-                <div className="hero-text">
+                 <div className="hero-text">
                     <h1>INDUSTRIAL</h1>
                     <div className="hero-grid">
                         <div className="symbol">
@@ -97,13 +104,14 @@ const Home = () => {
                             <div className="big">
                                 <h1>PLANNING</h1>
                             </div>
-                            <div className="small">
+                           <div className="small">
                                 <h3>FORUM</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </session>
+            HEAD
             <div className='logo'>
                     <div className='ipf-logo'>
                         <img ref={el => { logoImgRef = el }} src={logo} alt="" />
@@ -124,16 +132,26 @@ const Home = () => {
                 <div className="heading">
                     <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
                 </div>
-                <div className="info">
-                    <div className="pic">
-                        <img ref={el => { aboutImgRef = el }} src={about} alt="" />
-                    </div>
-                    <div ref={el => { aboutInfoRef = el }} className="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi totam voluptate, error dolores autem quibusdam ut aperiam expedita ullam beatae libero atque molestias est, quas doloremque fuga quidem! Ut illo dolores animi unde incidunt totam voluptatem natus debitis facilis. Quam hic, velit fugit libero placeat reiciendis alias soluta dolorem nemo et, corrupti voluptates veniam perspiciatis, voluptate officia sapiente fuga enim iure. Fuga laboriosam, repudiandae quos sit vel inventore quasi iure, ea incidunt soluta eius necessitatibus deleniti id perferendis, explicabo quisquam cum eum ab! Alias accusamus sint molestiae facilis nam autem corporis rerum, aut voluptas reiciendis, vel iure, explicabo quas debitis.
-                    </div>
-                </div>
             </session>
-            <session ref={el => { contactRef = el }} className="contact">
+            <session className="about">
+                <div className="info">
+                    <div className="heading">
+                        <h1>ABOUT</h1>
+                    </div>
+                </div> 
+            </session>
+            {/* <div className="heading">
+                    <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
+            </div> */}
+            <div className="logo">
+                  <Letter letter='I'></Letter>
+                  <Letter letter='P' ></Letter>
+                  <Letter letter='F' ></Letter>
+            </div>
+            <div className="slider">
+            <Slider></Slider>
+            </div>
+            {/* <session ref={el => { contactRef = el }} className="contact">
                 <div className="heading">
                     <h1 ref={el => { contactHeadRef = el }}>Contact us</h1>
                 </div>
@@ -150,8 +168,12 @@ const Home = () => {
                         </form>
                     </div>
                 </div>
+            </session> */}
+            <session>
+                <Footer/>
             </session>
         </div>
+        </>
     )
 }
 export default Home;

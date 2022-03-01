@@ -1,0 +1,105 @@
+.letter {
+	position: relative;
+	width: 20vw;
+	height: 55vh;
+	background: rgb(247, 244, 244);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+	margin-bottom: 150px;
+	border-radius: 20px;
+
+	p {
+		background-image: linear-gradient(#ee211e, #000000, #63e0b8);
+
+		background-size: 100%;
+		background-repeat: repeat;
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		background-clip: text;
+		opacity: 0.5;
+		padding-top: 10px;
+		font-size: 250px;
+		width: 100%;
+		margin: 50%;
+		font-weight: 1000;
+	}
+}
+
+@keyframes spaceboots {
+	0% {
+		-webkit-transform: translate(2px, 1px) rotate(0deg);
+	}
+	10% {
+		-webkit-transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		-webkit-transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		-webkit-transform: translate(0px, 2px) rotate(0deg);
+	}
+	40% {
+		-webkit-transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		-webkit-transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		-webkit-transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		-webkit-transform: translate(2px, 1px) rotate(-1deg);
+	}
+	80% {
+		-webkit-transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		-webkit-transform: translate(2px, 2px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+.letter:hover,
+.letter:focus {
+	animation-name: spaceboots;
+	animation-duration: 0.8s;
+	transform-origin: 50% 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@media only screen and (max-width: 1000px) {
+	.letter {
+		width: 25vw;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.letter {
+		width: 35vw;
+		margin: 24px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.letter {
+		width: 45vw;
+		margin: 24px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.letter {
+		width: 45vw;
+		height: 30vh;
+
+		p {
+			font-size: 170px;
+		}
+	}
+}
