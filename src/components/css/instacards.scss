@@ -11,7 +11,9 @@ a {
 .cardlists {
     display: flex;
     flex-direction: row;
-    padding: 3rem;
+    margin-top:20px;
+    padding: 4rem;
+    padding-bottom: 177px;
     overflow-x: scroll;
 }
 .cardlists ::-webkit-scrollbar {
@@ -19,12 +21,12 @@ a {
     height: 10px;
 }
 .cardlists ::-webkit-scrollbar-thumb {
-    background: #201c29;
+    background: #6f6685;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+    box-shadow: inset 2px 2px 2px rgba(143, 70, 70, 0.25), inset -2px -2px 2px rgba(194, 44, 44, 0.25);
 }
 .cardlists ::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+    background: linear-gradient(90deg,#8f71d4,#4d2b9c 1px,#5726b9 0,#6d28f7);
 }
 .cards {
     height: 400px;
