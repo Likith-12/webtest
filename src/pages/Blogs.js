@@ -1,18 +1,17 @@
-
-
-// import axios from 'axios';
 import { useEffect, useState } from 'react';
+import firestore from '../firebase';
 import { Link } from 'react-router-dom';
 
 
 import Card from '../components/Card';
-import firestore from '../firebase';
 
 import './css/blogs.scss'
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
     useEffect(() => {
         FetchBlogs()
+        console.log(blogs);
+
     }, [])
     const FetchBlogs = () => {
         firestore.collection("blogs").get().then((querySnapshot) => {
@@ -27,10 +26,10 @@ const Blogs = () => {
     return (
         <div className="container" >
             <div className="blogs-container">
-                {blogs.map((post) => {
+                {blogs.map((post, index) => {
                     return (
-                        <Link to={`/blog/${post.slug}`}>
-                            <Card key={post.slug} data={post} />
+                        <Link key={index} to={`/blog/${post.slug}`}>
+                            <Card data={post} />
                         </Link>
                     )
                 }
