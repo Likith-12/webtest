@@ -127,3 +127,68 @@
 	}
 
 }
+@media (max-width: 1200px)
+{
+	.menu .menu-layer .wrapper .menu-links nav ul li a{
+		font-size: 5rem;
+	}
+	.menu .menu-layer .wrapper .menu-links nav ul li{
+		width : 350px;
+	}
+
+	.menu .menu-layer .wrapper .menu-links nav ul{
+		column-gap: 2.3rem;
+	}
+
+}
+
+@media (max-width: 900px)
+{
+	.menu .menu-layer .wrapper .menu-links nav ul li a{
+		font-size: 4.4rem;
+	}
+	.menu .menu-layer .wrapper .menu-links nav ul li{
+		width : 300px;
+	}
+
+	.menu .menu-layer .wrapper .menu-links nav ul{
+		column-gap: 4rem;
+	}
+
+}
+
+@media (max-width: 800px)
+{
+	.menu .menu-layer .wrapper .menu-links nav ul li a{
+		font-size: 3.7rem;
+	}
+	.menu .menu-layer .wrapper .menu-links nav ul li{
+		width : 260px;
+	}
+
+	.menu .menu-layer .wrapper .menu-links nav ul{
+		column-gap: 5rem;
+	}
+	.menu .menu-layer .wrapper{
+		padding:25px;
+	}
+
+}
+
+@media (max-width: 650px)
+{
+	.menu .menu-layer .wrapper .menu-links nav ul li a{
+		font-size: 3.2rem;
+	}
+	.menu .menu-layer .wrapper .menu-links nav ul li{
+		width : 230px;
+	}
+
+	.menu .menu-layer .wrapper .menu-links nav ul{
+		column-gap: 2.3rem;
+	}
+	.menu .menu-layer .wrapper{
+		padding:30px;
+	}
+
+}
