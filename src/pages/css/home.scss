@@ -31,7 +31,8 @@ session {
 	align-items: center;
 	flex-wrap: wrap;
 	color: white;
-	margin-bottom: 40px;
+	margin-bottom: 61px;
+	margin-right: 20px;
 
 	.hero {
 		@include flex;
@@ -51,7 +52,7 @@ session {
 		letter-spacing: 12px;
 
 		h1 {
-			font-size: 5rem;
+			font-size: 6rem;
 		}
 
 		.hero-grid {
@@ -62,7 +63,7 @@ session {
 
 			.symbol {
 				h1 {
-					font-size: 6rem;
+					font-size: 7rem;
 				}
 
 				grid-column: 1/2;
@@ -80,6 +81,31 @@ session {
 		}
 	}
 }
+
+
+@media (max-width :1150px)
+{
+	.hero
+	{
+		height: 700px;
+	}
+
+	.hero-text{
+		h1
+		{
+			font-size: 4rem;
+		}
+		.hero-grid
+		{
+			h1
+			{
+				font-size: 5rem;
+			}
+		}
+	}
+}
+
+
 
 .about,
 .contact {
@@ -139,7 +165,7 @@ session {
 	margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 970px) {
 	.logo {
 		display: flex;
 		align-items: center;
@@ -147,9 +173,20 @@ session {
 	}
 
 	.landing{
+		.hero
+		{
+			height: 376px;
+		}
 		.hero-text{
 			h1{
-				font-size: 4rem;
+				font-size: 3.7rem;
+			}
+			.hero-grid
+			{
+				h1
+				{
+					font-size: 4rem;
+				}
 			}
 		}
 	}
