@@ -84,16 +84,16 @@ const BurgerMenu = ({ state }) => {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link to="/about" ref={el => { line1 = el }}>About</Link>
+                                    <Link to="/" ref={el => { line1 = el }}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" ref={el => { line2 = el }}>Blogs</Link>
+                                    <Link to="/Blogs" ref={el => { line2 = el }}>Blogs</Link>
                                 </li>
                                 <li>
                                     <Link to="/Events" ref={el => { line3 = el }}>Events</Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" ref={el => { line4 = el }}>Contact</Link>
+                                    <Link to="/Series" ref={el => { line4 = el }}>Series</Link>
                                 </li>
                             </ul>
                         </nav>

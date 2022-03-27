@@ -2,7 +2,7 @@ import React from 'react';
 import './css/card_event.scss'
 import Tilt from './Tilt'
 
-function Card_event() {
+function Card_event({ data }) {
 
   const options = {
     scale: 1.05,
@@ -11,7 +11,7 @@ function Card_event() {
   };
   return (
     <>
-      <Tilt className="container" options={options} />
+      <Tilt className="container" options={options} data={data} />
     </>
   )
 }
