@@ -20,19 +20,21 @@ function Series() {
   }, [])
 
   return (
-    <section className="cardlists">
-
+    <>
       {
         series.map((data, index) => {
           return (
-            <article key={index} className="cards">
+            // <article key={index} className="cards">
+            <section className="cardlists">
+
               <InstaCards urls={data.url} />
-            </article>
+
+            </section>
+            // </article>
           )
         })
       }
-    </section>
-
+    </>
   );
 };
 

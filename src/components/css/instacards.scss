@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #17141d;
     color: white;
-    font-family: 'DM Mono', monospace;
+    font-family: "DM Mono", monospace;
 }
 a {
     text-decoration: none;
@@ -11,9 +11,9 @@ a {
 .cardlists {
     display: flex;
     flex-direction: row;
-    margin-top:20px;
+    margin-top: 20px;
     padding: 4rem;
-    padding-bottom: 177px;
+    padding-bottom: 20px;
     overflow-x: scroll;
 }
 .cardlists ::-webkit-scrollbar {
@@ -26,25 +26,25 @@ a {
     box-shadow: inset 2px 2px 2px rgba(143, 70, 70, 0.25), inset -2px -2px 2px rgba(194, 44, 44, 0.25);
 }
 .cardlists ::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#8f71d4,#4d2b9c 1px,#5726b9 0,#6d28f7);
+    background: linear-gradient(90deg, #8f71d4, #4d2b9c 1px, #5726b9 0, #6d28f7);
 }
 .cards {
-    height: 400px;
-    width: 750px;
-    min-width: 250px;
+    min-height: 400px;
+    min-width: 350px;
     padding: 1.5rem;
     border-radius: 16px;
     background: #17141d;
     box-shadow: -1rem 0 3rem #000;
     display: flex;
-    flex-direction: column;
-    transition: .2s;
+    flex-direction: row;
+    transition: 0.2s;
     margin: 0;
     scroll-snap-align: start;
     clear: both;
     position: relative;
 }
-.cards:focus-within~.cards, .cards:hover~.cards {
+.cards:focus-within ~ .cards,
+.cards:hover ~ .cards {
     transform: translateX(320px);
 }
 .cards:hover {

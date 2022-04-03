@@ -88,17 +88,16 @@
 								color: rgba(255, 255, 255, 0.918);
 								text-decoration: none;
 								font-size: 7rem;
-								font-family:'Poppins', sans-serif;
+								font-family: "Poppins", sans-serif;
 
 								&:hover {
-									color: rgb(187, 187, 22);
+									color: rgb(185, 185, 165);
 								}
 							}
 						}
-						li:hover{
-  								transform: rotate(360deg);
+						li:hover {
+							transform: scale(1.05);
 						}
-						
 					}
 				}
 			}
@@ -112,83 +111,82 @@
 				padding: 5px;
 				align-items: center;
 				flex-direction: row;
-				margin:auto;
+				margin: auto;
 				margin-bottom: 20px;
 				color: white;
 
 				a {
-					font-size:1rem;
-					padding:20px;
+					font-size: 1rem;
+					padding: 20px;
 					margin-left: 5px;
+					&:hover {
+						color: rgb(185, 185, 165);
+						transform: scale(1.05);
+					}
 				}
-
 			}
 		}
 	}
-
 }
-@media (max-width: 1200px)
-{
-	.menu .menu-layer .wrapper .menu-links nav ul li a{
+@media (max-width: 1200px) {
+	.menu .menu-layer .wrapper .menu-links nav ul li a {
 		font-size: 5rem;
 	}
-	.menu .menu-layer .wrapper .menu-links nav ul li{
-		width : 350px;
+	.menu .menu-layer .wrapper .menu-links nav ul li {
+		width: 350px;
 	}
 
-	.menu .menu-layer .wrapper .menu-links nav ul{
+	.menu .menu-layer .wrapper .menu-links nav ul {
 		column-gap: 2.3rem;
 	}
-
 }
 
-@media (max-width: 900px)
-{
-	.menu .menu-layer .wrapper .menu-links nav ul li a{
+@media (max-width: 900px) {
+	.menu .menu-layer .wrapper .menu-links nav ul li a {
 		font-size: 4.4rem;
 	}
-	.menu .menu-layer .wrapper .menu-links nav ul li{
-		width : 300px;
+	.menu .menu-layer .wrapper .menu-links nav ul li {
+		width: 300px;
 	}
 
-	.menu .menu-layer .wrapper .menu-links nav ul{
+	.menu .menu-layer .wrapper .menu-links nav ul {
 		column-gap: 4rem;
 	}
-
 }
 
-@media (max-width: 800px)
-{
-	.menu .menu-layer .wrapper .menu-links nav ul li a{
+@media (max-width: 800px) {
+	.menu .menu-layer .wrapper .menu-links nav ul li a {
 		font-size: 3.7rem;
 	}
-	.menu .menu-layer .wrapper .menu-links nav ul li{
-		width : 260px;
+	.menu .menu-layer .wrapper .menu-links nav ul li {
+		width: 260px;
 	}
 
-	.menu .menu-layer .wrapper .menu-links nav ul{
+	.menu .menu-layer .wrapper .menu-links nav ul {
 		column-gap: 5rem;
 	}
-	.menu .menu-layer .wrapper{
-		padding:25px;
+	.menu .menu-layer .wrapper {
+		padding: 25px;
 	}
-
 }
 
-@media (max-width: 650px)
-{
-	.menu .menu-layer .wrapper .menu-links nav ul li a{
+@media (max-width: 650px) {
+	.menu .menu-layer .wrapper .menu-links nav ul li a {
 		font-size: 3.2rem;
 	}
-	.menu .menu-layer .wrapper .menu-links nav ul li{
-		width : 230px;
+	.menu .menu-layer .wrapper .menu-links nav ul li {
+		width: 210px;
+		height: 100px;
 	}
 
-	.menu .menu-layer .wrapper .menu-links nav ul{
-		column-gap: 2.3rem;
+	.menu .menu-layer .wrapper .menu-links nav ul {
+		grid-template-columns: 1fr;
+		column-gap: 0.5rem;
+		gap: 0rem;
+		width: fit-content;
+		margin: 0 auto;
 	}
-	.menu .menu-layer .wrapper{
-		padding:30px;
+	.menu .menu-layer .wrapper {
+		padding: 30px;
 	}
-
 }
