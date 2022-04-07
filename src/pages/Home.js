@@ -14,6 +14,10 @@ import './css/home.scss'
 import about from '../assets/about.jpg';
 import contact from '../assets/contact.jpg';
 import logo from '../assets/ipf_400-100 (1).jpg';
+import logo1 from '../assets/logo1.png';
+import arrow1 from '../assets/arrow1.png';
+import arrow2 from '../assets/arrow2.png';
+import arrow3 from '../assets/arrow3.png';
 import { OrbitControls } from '@react-three/drei'
 import { Suspense } from 'react'
 import FluidAnimation from 'react-fluid-animation'
@@ -37,6 +41,10 @@ const Home = () => {
     // let aboutInfoRef = useRef(null)
     // let aboutRef = useRef(null)
     // let aboutHeadRef = useRef(null)
+    let logoImgRef = useRef(null)
+    let arrow1ImgRef = useRef(null)
+    let arrow2ImgRef = useRef(null)
+    let arrow3ImgRef = useRef(null)
     let contactImgRef = useRef(null)
     let contactHeadRef = useRef(null)
     let contactInfoRef = useRef(null)
@@ -104,6 +112,22 @@ const Home = () => {
                     </div>
                 </div>
             </session>
+            <div className='logo1'>
+                    <div className='ipf-logo'>
+                        <img ref={el => { logoImgRef = el }} src={logo1} alt="" />
+                    </div>
+                    <div className="arrows">
+                    <div className='arrow1'>
+                        <img ref={el => { arrow1ImgRef = el }} src={arrow1} alt="" />
+                    </div>
+                    <div className='arrow2'>
+                        <img ref={el => { arrow2ImgRef = el }} src={arrow3} alt="" />
+                    </div>
+                    <div className='arrow3'>
+                        <img ref={el => { arrow3ImgRef = el }} src={arrow2} alt="" />
+                    </div>
+                    </div>
+            </div>
             <session className="about">
                 <div className="info">
                     <div className="heading">
