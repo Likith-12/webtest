@@ -30,7 +30,7 @@ function Blog() {
                 </div>
                 <div className="head-info">
                     <h1 style={{ color: "red" }}>{blog.name}</h1>
-                    <h3>post.date</h3>
+                    <h3>{blog.date}</h3>
                 </div>
             </div>
             <div className="article">

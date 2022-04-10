@@ -19,9 +19,17 @@ const Events = () => {
     }
     return (
         <div className='event-container'>
-            <div className='card_event'>
-                <Card_event />
-            </div>
+
+            {
+                events.map((data, index) => {
+                    return (
+                        <div key={index} className='card_event'>
+                            <Card_event data={data} />
+                        </div>
+                    )
+                })
+            }
+
         </div>
     )
 }
