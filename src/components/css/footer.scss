@@ -34,7 +34,8 @@
 /**********FOOTER_TEXT**********/
 .footer_text {
 	position: absolute;
-	bottom: 40vh;
+	top: 10vh;
+	// bottom: 40vh;
 	left: 6vw;
 	background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
 	-webkit-background-clip: text;

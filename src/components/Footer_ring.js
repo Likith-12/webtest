@@ -15,7 +15,16 @@ function Footer_ring() {
                 <g className="group">
                     <use xlinkHref="#circlePath" fill="none"/>
                 <text fill="#ff00ff">
-                    <textPath xlinkHref="#circlePath">INDUSTRIAL AND PLANNING FORUM -------- IPF ------ INDUSTRIAL AND PLANNING FORUM ------ IPF ------- </textPath>
+                    <textPath xlinkHref="#circlePath">
+                        INDUSTRIAL AND PLANNING FORUM 
+                        -----
+                        IPF 
+                        -----
+                        INDUSTRIAL AND PLANNING FORUM 
+                        -----
+                        IPF 
+                        -------
+                        </textPath>
                 </text>
                 </g>
             </svg>

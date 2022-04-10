@@ -1,7 +1,7 @@
 /*************FOOTER_TEXT_ROTATION************************/
 .footer_ring {
 	position: absolute;
-	bottom: 2vh;
+	bottom: 13vh;
 	right: -3%;
 }
 
@@ -35,6 +35,22 @@ svg g text {
 	font-weight: 600;
 	text-decoration-thickness: 3px;
 }
+
+// .ipf_dash_1
+// {
+// 	position: relative;
+// }
+
+.ipf_dash_1:before
+{
+   position: absolute;
+   content: "";
+   display: block;
+   width: 120px;
+   height: 2px;
+   background: #fff;
+}
+
 
 @keyframes rotate {
 	from {

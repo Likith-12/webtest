@@ -7,14 +7,14 @@ const Navbar = ({ history }) => {
     const [state, setState] = useState({
         initial: false,
         clicked: null,
-        menuName: "Menu"
+        menuName: "MENU"
     })
     const [disabled, setDisabled] = useState(false)
 
     useEffect(() => {
         history.listen(() => {
             setState({
-                clicked: false, menuName: "Menu"
+                clicked: false, menuName: "MENU"
             })
         })
     })

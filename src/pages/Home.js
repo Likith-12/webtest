@@ -113,9 +113,9 @@ const Home = () => {
                 </div>
             </session>
             <div className='logo1'>
-                    <div className='ipf-logo'>
+                    {/* <div className='ipf-logo'>
                         <img ref={el => { logoImgRef = el }} src={logo1} alt="" />
-                    </div>
+                    </div> */}
                     <div className="arrows">
                     <div className='arrow1'>
                         <img ref={el => { arrow1ImgRef = el }} src={arrow1} alt="" />
