@@ -45,7 +45,7 @@
 /*******************************************/
 
 .slide_1 {
-	height: 100vh;
+	height: 90vh;
 	background-color: #bd1616;
 	background-size: cover;
 	width: 94vw;
@@ -74,13 +74,30 @@
 	}
 }
 
+.slider_event
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: display 1000ms ease-in-out;
+}
+
 .slide_1.active_1 {
 	width: 3vw;
 	transition: all 500ms ease-in-out;
+	.slider_event
+	{
+		display: none;
+		transition: display 1000ms ease-in-out;
+	}
 }
 
 .slide_1.deactive_1 {
 	transition: all 500ms ease-in-out;
+	.slider_event
+	{
+		transition: display 1000ms ease-in-out;
+	}
 }
 
 .slide_1.vertical_1 {
@@ -115,7 +132,7 @@
 /******************************************/
 
 .slide_2 {
-	height: 100vh;
+	height: 90vh;
 	color: #261c2c;
 	background-color: #eeeeee;
 	width: 97vw;
@@ -191,7 +208,7 @@
 /******************************************/
 
 .slide_3 {
-	height: 100vh;
+	height: 90vh;
 	width: 100vw;
 	color: #eeeeee;
 	background-color: #1c7947;

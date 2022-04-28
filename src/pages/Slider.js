@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
+import firestore from '../firebase';
+import Slider_event from '../components/Slider_event';
 import './css/slider.scss'
 
 function Slider(){
@@ -75,6 +76,20 @@ function Slider(){
 
 
 
+  const [events, setEvents] = useState([])
+    useEffect(() => {
+        FetchEvents()
+        console.log(events);
+    }, [])
+    const FetchEvents = () => {
+        firestore.collection("events").get().then((querySnapshot) => {
+            querySnapshot.forEach(element => {
+                var data = element.data();
+                setEvents(arr => [...arr, data]);
+            });
+        })
+    }
+
   return(
   <div className="container_slider">
     <div className="slide slide_3">
@@ -100,6 +115,15 @@ function Slider(){
           </div>
 
           <div className={`slide slide_1 ${hrz1} ${hrzde1} ${ver1} ${verde1}`}>
+               {
+                events.map((data, index) => {
+                    return (
+                        <div key={index} className="slider_event">
+                        {index==0 || index==1?<Slider_event data={data}/>:""}
+                        </div>
+                    )
+                })
+               }
               <div className="slide_event_1">  
                 <a id="event_1" onClick={slide_one}>
                    <span>E</span>
