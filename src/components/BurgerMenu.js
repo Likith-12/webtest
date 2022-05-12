@@ -43,7 +43,7 @@ const BurgerMenu = ({ state }) => {
                 height: "100%"
             })
             staggerReveal(revealMenuBg, revealMenu);
-            staggerRevealLink(line1, line2, line3, line4)
+            staggerRevealLink(line1.current, line2.current, line3.current, line4.current)
             staggerRevealLink(link1, link2, link3, link4)
 
         }
@@ -66,11 +66,11 @@ const BurgerMenu = ({ state }) => {
         gsap.from([node1, node2, node3, node4], {
             y: 60,
             duration: 1,
-            delay: 0.4,
+            delay: 0.5,
             opacity: 0,
             ease: 'power3.inOut',
             stagger: {
-                amount: 0.1
+                amount: 0.3
             }
 
         })
@@ -84,16 +84,16 @@ const BurgerMenu = ({ state }) => {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link to="/" ref={el => { line1 = el }}>Home</Link>
+                                    <Link to="/" ref={line1}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Blogs" ref={el => { line2 = el }}>Blogs</Link>
+                                    <Link to="/Blogs" ref={line2}>Blogs</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Events" ref={el => { line3 = el }}>Events</Link>
+                                    <Link to="/Events" ref={line3}>Events</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Series" ref={el => { line4 = el }}>Series</Link>
+                                    <Link to="/Series" ref={line4}>Series</Link>
                                 </li>
                             </ul>
                         </nav>
