@@ -87,7 +87,7 @@ const Slider = () => {
 
                             <InstaCards urls={series} />
                         </div>
-                        <button onClick={() => { window.location.href = "/series" }} className="btn third">Read More</button>
+                        <button onClick={() => { window.location.href = "/series" }} style={{ color: '#000', border: ' 1px solid #000', outline: 'solid #000 1px', boxShadow: '0 0 40px 40px rgb(255, 255, 255) inrgb(255, 255, 255) 0 0 0 0 rgb(255, 255, 255)' }} className="btn third">Read More</button>
 
                     </div>
                 </li >
