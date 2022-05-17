@@ -115,15 +115,17 @@ function Slider(){
           </div>
 
           <div className={`slide slide_1 ${hrz1} ${hrzde1} ${ver1} ${verde1}`}>
+               <div className="slider_events">
                {
                 events.map((data, index) => {
                     return (
                         <div key={index} className="slider_event">
-                        {index==0 || index==1?<Slider_event data={data}/>:""}
+                        {index===0 || index===1?<Slider_event data={data}/>:""}
                         </div>
                     )
                 })
                }
+               </div>
               <div className="slide_event_1">  
                 <a id="event_1" onClick={slide_one}>
                    <span>E</span>

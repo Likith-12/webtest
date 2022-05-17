@@ -50,8 +50,9 @@
 	background-size: cover;
 	width: 94vw;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0px;
+	left: 0px;
+	overflow-y: scroll;
 }
 
 .slide_event_1 {
@@ -80,6 +81,13 @@
 	flex-direction: column;
 	justify-content: space-between;
 	transition: display 1000ms ease-in-out;
+	overflow-y: hidden;
+}
+
+.slider_events
+{
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .slide_1.active_1 {
