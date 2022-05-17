@@ -4,6 +4,8 @@ import './css/slider.scss'
 import InstaCards from './InstaCards';
 import Card from '../components/Card'
 import Card_event from './Card_event';
+import { Link } from 'react-router-dom'
+
 
 const Slider = () => {
     const [active, setActive] = useState(2)
@@ -36,10 +38,18 @@ const Slider = () => {
         firestore.collection("series").limit(lim).get().then((querySnapshot) => {
             querySnapshot.forEach(element => {
                 var data = element.data();
-                setSeries(data.url);
+                const uri = data.url
+                if (window.innerWidth < 500) {
+                    uri.map((u, index) => {
+                        if (index == 0) {
+                            setSeries([u])
+                        }
+                    })
+                } else {
+                    setSeries(data.url)
+                }
             });
         })
-        console.log(series);
 
     }
     const FetchBlogs = (lim) => {
@@ -67,10 +77,12 @@ const Slider = () => {
                         <div className='inner'>
 
                             {
-                                events.map((event) => <Card_event data={event} />)
+                                events.map((event, index) => <Card_event key={index} data={event} />)
                             }
                         </div>
-                        <button onClick={() => { window.location.href = "/events" }} className="btn third">Read More</button>
+                        <Link to='/events'>
+                            <button className="btn third">Read More</button>
+                        </Link>
 
                     </div>
                 </li >
@@ -84,10 +96,16 @@ const Slider = () => {
                     <h3>Series</h3>
                     <div className='section-content'>
                         <div className='inner'>
+                            {/* {
+                                window.innerWidth > 500 && <InstaCards urls=series
+                            } */}
 
                             <InstaCards urls={series} />
+
                         </div>
-                        <button onClick={() => { window.location.href = "/series" }} style={{ color: '#000', border: ' 1px solid #000', outline: 'solid #000 1px', boxShadow: '0 0 40px 40px rgb(255, 255, 255) inrgb(255, 255, 255) 0 0 0 0 rgb(255, 255, 255)' }} className="btn third">Read More</button>
+                        <Link to='/series'>
+                            <button style={{ color: '#000', border: ' 1px solid #000', outline: 'solid #000 1px', boxShadow: '0 0 40px 40px rgb(255, 255, 255) inrgb(255, 255, 255) 0 0 0 0 rgb(255, 255, 255)' }} className="btn third">Read More</button>
+                        </Link>
 
                     </div>
                 </li >
@@ -102,15 +120,18 @@ const Slider = () => {
                     <div className='section-content'>
                         <div className='inner'>
                             {
-                                blogs.map((blog) => {
+                                blogs.map((blog, index) => {
                                     return (
-                                        <Card data={blog} />
+                                        <Card data={blog} key={index} />
                                     )
                                 })
                             }
 
                         </div>
-                        <button onClick={() => { window.location.href = "/blogs" }} className="btn third">Read More</button>
+                        <Link to='/blogs'>
+
+                            <button className="btn third">Read More</button>
+                        </Link>
                     </div>
                 </li >
 

@@ -235,3 +235,24 @@
     box-shadow: 0 0 10px 0 rgb(255, 255, 255) inset, 0 0 10px 4px rgb(255, 255, 255);
   }
 }
+
+.cardlists {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 4rem;
+  padding-bottom: 20px;
+  overflow-x: scroll;
+}
+.cardlists ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.cardlists ::-webkit-scrollbar-thumb {
+  background: #6f6685;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px rgba(143, 70, 70, 0.25), inset -2px -2px 2px rgba(194, 44, 44, 0.25);
+}
+.cardlists ::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #8f71d4, #4d2b9c 1px, #5726b9 0, #6d28f7);
+}
