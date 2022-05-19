@@ -11,22 +11,22 @@ export default function Model({ ...props }) {
   const f = useRef()
   const [index, setIndex] = useState(0)
   const [palette, setPalette] = useState([
-    {
-      i: { r: 0, g: 0, b: 0 },
-      p: { r: 1, g: 0, b: 0 },
-      f: { r: 0, g: 1, b: 0 }
+{
+      i: { r: 0.329, g: 0.396, b: 1 },
+      p: { r: 0.474, g: 0.549, b: 1 },
+      f: { r: 0.607, g: 0.694, b: 1 }
     },
     {
-      i: { r: 0.2, g: 0.2, b: 0.2 },
-      p: { r: 0.4, g: 0.4, b: 0.4 },
-      f: { r: 0.2, g: 1, b: 0.1 }
+      i: { r: 0..937, g: 0.278, b: 0.435 },
+      p: { r: 1, g: 0.819, b: 0.4 },
+      f: { r: 0.023, g: 0.839, b: 0.627 }
     },
     {
-      i: { r: 0, g: 0, b: 0 },
-      p: { r: 1, g: 0, b: 0 },
-      f: { r: 0, g: 1, b: 0 }
+      i: { r: 0.580, g: 0.109, b: 0.184 },
+      p: { r: 0.933, g: 0.823, b: 0.8 },
+      f: { r: 0.423, g: 0.603, b: 0.545 }
     },
-
+    
 
   ])
   // const [palette, setPalette] = useState({
