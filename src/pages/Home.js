@@ -55,9 +55,10 @@ const Home = () => {
                 <session className="landing">
                     <div className="hero">
                         <Canvas>
-                            <OrbitControls maxAzimuthAngle={Math.PI / 2} minAzimuthAngle={-Math.PI / 2} maxPolarAngle={Math.PI / 2} minPolarAngle={-Math.PI / 2} enablePan={false} enableRotate={true} enableZoom={false} />
+                            <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
                             <Camera position={[10, 0, 0]} />
-                            <ambientLight />
+                            <ambientLight intensity={0.1} />
+                            <pointLight intensity={.1} color='white' position={[10, 0, 0]} />
                             <Suspense fallback={null}>
                                 <Logo scale={0.8} position={[0, -4, 0]} />
                                 {/* <IPF scale={0.8} position={[0, -4, 0]} /> */}
