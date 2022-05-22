@@ -58,11 +58,9 @@ const Home = () => {
                 <Background />
                 <session className="landing">
                     <div className="hero">
-                        <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} camera={{ fov: 75, position: [6, 0, 0] }} linear>
-                            <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
-                            {/* <Camera position={[10, 0, 0]} /> */}
+                        <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} camera={{ fov: 75, position: [7, 0, 0] }} linear>
+                            <OrbitControls maxAzimuthAngle={4 * Math.PI / 6} minAzimuthAngle={Math.PI / 3} maxPolarAngle={4 * Math.PI / 6} minPolarAngle={Math.PI / 3} enablePan={false} enableRotate={true} enableZoom={false} />
                             <ambientLight intensity={1} />
-                            {/* <pointLight intensity={.1} color='white' position={[10, 0, 0]} /> */}
                             <Suspense fallback={null}>
                                 <Logo scale={0.8} position={[0, -4, 0]} onClick={rotateModel} />
                             </Suspense>

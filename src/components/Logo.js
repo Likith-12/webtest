@@ -44,17 +44,14 @@ export default function Model({ ...props }) {
     Object.entries(actions).forEach(([key, value]) => {
       value.play().setEffectiveTimeScale(0.5)
     });
+    // anim()
   }, [])
-  useEffect(() => {
-    console.log(group);
+  // const anim = () => {
+  //   requestAnimationFrame(anim)
+  //   group.current.rotation.y += 0.01
 
-  }, [i])
-  function rLerp(A, B, w) {
-    console.log("r");
-    let CS = (1 - w) * Math.cos(A) + w * Math.cos(B);
-    let SN = (1 - w) * Math.sin(A) + w * Math.sin(B);
-    return Math.atan2(SN, CS);
-  }
+  //   console.log(group.current.rotation.y);
+  // }
   const changecolor = () => {
     const color = palette[index]
     const childI = i?.current?.children;
