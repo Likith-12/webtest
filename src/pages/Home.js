@@ -14,6 +14,7 @@ import arrow2 from '../assets/arrow2.png';
 import arrow3 from '../assets/arrow3.png';
 import { OrbitControls } from '@react-three/drei'
 import "aos/dist/aos.css"
+import { NoToneMapping } from 'three'
 
 
 const Home = () => {
@@ -48,21 +49,22 @@ const Home = () => {
         return <perspectiveCamera ref={ref} {...props} />
     }
 
+    const rotateModel = () => {
+
+    }
     return (
         <>
             <div className="home" id="home">
                 <Background />
                 <session className="landing">
                     <div className="hero">
-                        <Canvas>
+                        <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} camera={{ fov: 75, position: [6, 0, 0] }} linear>
                             <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
-                            <Camera position={[10, 0, 0]} />
-                            <ambientLight intensity={0.1} />
-                            <pointLight intensity={.1} color='white' position={[10, 0, 0]} />
+                            {/* <Camera position={[10, 0, 0]} /> */}
+                            <ambientLight intensity={1} />
+                            {/* <pointLight intensity={.1} color='white' position={[10, 0, 0]} /> */}
                             <Suspense fallback={null}>
-                                <Logo scale={0.8} position={[0, -4, 0]} />
-                                {/* <IPF scale={0.8} position={[0, -4, 0]} /> */}
-                                {/* <Logo5 scale={0.6} position={[0, -3, 0]} /> */}
+                                <Logo scale={0.8} position={[0, -4, 0]} onClick={rotateModel} />
                             </Suspense>
                         </Canvas>
                     </div>
