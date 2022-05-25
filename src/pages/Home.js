@@ -4,7 +4,7 @@ import Slider from '../components/Slider'
 import Footer from '../components/Footer'
 import Background from '../components/Background'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import Logo5 from '../components/Logo5'
+import Logo from '../components/Logo'
 import Letter from '../components/Letter'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,18 +14,11 @@ import arrow2 from '../assets/arrow2.png';
 import arrow3 from '../assets/arrow3.png';
 import { OrbitControls } from '@react-three/drei'
 import "aos/dist/aos.css"
+import { NoToneMapping } from 'three'
 
 
 const Home = () => {
 
-    let logoImgRef = useRef(null)
-    let arrow1ImgRef = useRef(null)
-    let arrow2ImgRef = useRef(null)
-    let arrow3ImgRef = useRef(null)
-    let contactImgRef = useRef(null)
-    let contactHeadRef = useRef(null)
-    let contactInfoRef = useRef(null)
-    let contactRef = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
 
     const { innerWidth: width, innerHeight: height } = window;
@@ -56,18 +49,20 @@ const Home = () => {
         return <perspectiveCamera ref={ref} {...props} />
     }
 
+    const rotateModel = () => {
+
+    }
     return (
         <>
             <div className="home" id="home">
                 <Background />
                 <session className="landing">
                     <div className="hero">
-                        <Canvas>
-                            <OrbitControls enablePan={false} enableRotate={false} enableZoom={false} />
-                            <Camera position={[10, 0, 0]} />
-                            <ambientLight />
+                        <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} camera={{ fov: 75, position: [7, 0, 0] }} linear>
+                            <OrbitControls maxAzimuthAngle={4 * Math.PI / 6} minAzimuthAngle={Math.PI / 3} maxPolarAngle={4 * Math.PI / 6} minPolarAngle={Math.PI / 3} enablePan={false} enableRotate={true} enableZoom={false} />
+                            <ambientLight intensity={1} />
                             <Suspense fallback={null}>
-                                <Logo5 scale={0.6} position={[0, -3, 0]} />
+                                <Logo scale={0.8} position={[0, -4, 0]} onClick={rotateModel} />
                             </Suspense>
                         </Canvas>
                     </div>
@@ -90,13 +85,13 @@ const Home = () => {
                     <div className='logo1'>
                         <div className="arrows">
                             <div className='arrow1'>
-                                <img ref={el => { arrow1ImgRef = el }} src={arrow1} alt="" />
+                                <img src={arrow1} alt="" />
                             </div>
                             <div className='arrow2'>
-                                <img ref={el => { arrow2ImgRef = el }} src={arrow3} alt="" />
+                                <img src={arrow3} alt="" />
                             </div>
                             <div className='arrow3'>
-                                <img ref={el => { arrow3ImgRef = el }} src={arrow2} alt="" />
+                                <img src={arrow2} alt="" />
                             </div>
                         </div>
                     </div>

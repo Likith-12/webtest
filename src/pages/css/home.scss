@@ -121,23 +121,6 @@ session {
 	}
 }
 
-// @media screen and (max-width: 550px) {
-// 	.hero {
-// 		height: 700px;
-// 	}
-
-// 	.hero-text {
-// 		h1 {
-// 			font-size: 3rem;
-// 		}
-// 		.hero-grid {
-// 			h1 {
-// 				font-size: 3rem;
-// 			}
-// 		}
-// 	}
-// }
-
 .about {
 	display: flex;
 	justify-content: space-evenly;
@@ -278,8 +261,8 @@ session {
 			align-items: flex-start;
 			justify-content: center;
 			flex-wrap: wrap;
-			width: 300px;
-			height: 300px;
+			width: 100vw;
+			height: 100vw;
 		}
 		.hero-text {
 			margin-top: 2rem;
