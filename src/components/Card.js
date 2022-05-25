@@ -8,7 +8,8 @@ const DisplayCard = ({ data }) => {
             </div>
 
             <div className="card-title">
-                <h2>{data.name}
+                <h2>
+                    {data.name}
                 </h2>
             </div>
             <div style={{ color: "white" }}>
