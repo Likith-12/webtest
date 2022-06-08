@@ -33,7 +33,7 @@ session {
 	color: white;
 	margin-bottom: 22px;
 	position: relative;
-	height: 90vh;
+	min-height: 90vh;
 	.hero {
 		@include flex;
 		display: flex;
@@ -41,32 +41,38 @@ session {
 		flex-wrap: wrap;
 		width: 500px;
 		height: 500px;
+		canvas {
+			display: flex;
+		}
+		@media screen and (max-width: 600px) {
+			width: 400px;
+			height: 400px;
+		}
 	}
 
 	.hero-text {
 		@include flex;
 		align-items: center;
-		width: fit-content;
+		height: fit-content;
 		flex-direction: column;
 		font-weight: bolder;
 		letter-spacing: 12px;
-
 		h1 {
 			font-size: 6rem;
 		}
 
 		.hero-grid {
 			display: grid;
-			aspect-ratio: 1/3;
 			grid-template-columns: 20% 70%;
 			letter-spacing: 12px;
+			height: inherit;
 
 			.symbol {
+				grid-column: 1/2;
+				height: fit-content;
 				h1 {
 					font-size: 7rem;
 				}
-
-				grid-column: 1/2;
 			}
 
 			.text {
@@ -79,45 +85,57 @@ session {
 				}
 			}
 		}
-		@media screen and (max-width: 600px) {
-			.hero-text {
-				@include flex;
-				align-items: center;
-				width: fit-content;
-				flex-direction: column;
-				font-weight: bolder;
-				letter-spacing: 12px;
+		@media screen and (max-width: 1200px) {
+			h1 {
+				font-size: 4rem;
+			}
 
-				h1 {
-					font-size: 1rem;
-				}
-
-				.hero-grid {
-					display: grid;
-					aspect-ratio: 1/3;
-					grid-template-columns: 20% 70%;
-					letter-spacing: 12px;
-
-					.symbol {
-						h1 {
-							font-size: 1rem;
-						}
-
-						grid-column: 1/2;
+			.hero-grid {
+				.symbol {
+					h1 {
+						font-size: 5rem;
 					}
-
-					.text {
-						@include flex;
-						flex-direction: column;
-						height: fit-content;
-
-						h2 {
-							font-size: 1rem;
-						}
+				}
+				.text {
+					h2 {
+						font-size: 4rem;
 					}
 				}
 			}
 		}
+		@media screen and (max-width: 600px) {
+			h1 {
+				font-size: 3rem;
+			}
+
+			.hero-grid {
+				.symbol {
+					h1 {
+						font-size: 4rem;
+					}
+				}
+				.text {
+					h2 {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 960px) {
+	.landing {
+		min-height: 140vh;
+	}
+}
+@media screen and (max-width: 600px) {
+	.landing {
+		min-height: 110vh;
+	}
+}
+@media screen and (max-width: 400px) {
+	.landing {
+		min-height: 100vh;
 	}
 }
 
@@ -168,21 +186,6 @@ session {
 	}
 }
 
-.logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.pic {
-	width: 400px;
-	object-fit: cover;
-}
-
-.pic img {
-	width: 100%;
-}
-
 .logo1 {
 	position: absolute;
 	bottom: 0;
@@ -228,30 +231,30 @@ session {
 	}
 }
 
-@media only screen and (max-width: 970px) {
-	.logo {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-	}
+// @media only screen and (max-width: 970px) {
+// 	.logo {
+// 		display: flex;
+// 		align-items: center;
+// 		flex-direction: column;
+// 	}
 
-	.landing {
-		.hero {
-			height: 400px;
-			width: 400px;
-		}
-		.hero-text {
-			h1 {
-				font-size: 3.7rem;
-			}
-			.hero-grid {
-				h1 {
-					font-size: 4rem;
-				}
-			}
-		}
-	}
-}
+// 	.landing {
+// 		.hero {
+// 			height: 400px;
+// 			width: 400px;
+// 		}
+// 		.hero-text {
+// 			h1 {
+// 				font-size: 3.7rem;
+// 			}
+// 			.hero-grid {
+// 				h1 {
+// 					font-size: 4rem;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 @media only screen and (max-width: 480px) {
 	.landing {

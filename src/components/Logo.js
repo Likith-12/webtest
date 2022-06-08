@@ -71,7 +71,6 @@ export default function Model({ ...props }) {
     } else {
       setIndex(0)
     }
-    group.current.scale.set(.8, .8, .8)
 
   }
   return (
