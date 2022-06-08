@@ -23,7 +23,20 @@ function App() {
         outerAlpha={0.5}
         outerScale={3}
         trailingSpeed={10}
-
+        clickables={[
+          'a',
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          'label[for]',
+          'select',
+          'textarea',
+          'button',
+          '.link',
+          '.hero'
+        ]}
       />
       <Router>
         <Navbar />

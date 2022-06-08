@@ -58,13 +58,15 @@ const Home = () => {
                 <Background />
                 <session className="landing">
                     <div className="hero">
-                        <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} camera={{ fov: 75, position: [7, 0, 0] }} linear>
-                            <OrbitControls maxAzimuthAngle={4 * Math.PI / 6} minAzimuthAngle={Math.PI / 3} maxPolarAngle={4 * Math.PI / 6} minPolarAngle={Math.PI / 3} enablePan={false} enableRotate={true} enableZoom={false} />
-                            <ambientLight intensity={1} />
-                            <Suspense fallback={null}>
-                                <Logo scale={0.8} position={[0, -4, 0]} onClick={rotateModel} />
-                            </Suspense>
-                        </Canvas>
+                        <button style={{ width: '100%', height: '100%', background: 'transparent', border: 'none' }}>
+                            <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} camera={{ fov: 75, position: [7, 0, 0] }} linear>
+                                <OrbitControls maxAzimuthAngle={4 * Math.PI / 6} minAzimuthAngle={Math.PI / 3} maxPolarAngle={4 * Math.PI / 6} minPolarAngle={Math.PI / 3} enablePan={false} enableRotate={true} enableZoom={false} />
+                                <ambientLight intensity={1} />
+                                <Suspense fallback={null}>
+                                    <Logo scale={0.8} position={[0, -4, 0]} onClick={rotateModel} />
+                                </Suspense>
+                            </Canvas>
+                        </button>
                     </div>
                     <div className="hero-text">
                         <h1>INDUSTRIAL</h1>
