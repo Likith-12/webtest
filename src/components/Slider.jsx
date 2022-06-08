@@ -104,7 +104,7 @@ const Slider = () => {
 
                         </div>
                         <Link to='/series'>
-                            <button style={{ color: '#000', border: ' 1px solid #000', outline: 'solid #000 1px', boxShadow: '0 0 40px 40px rgb(255, 255, 255) inrgb(255, 255, 255) 0 0 0 0 rgb(255, 255, 255)' }} className="btn third">Read More</button>
+                            <div style={{ color: '#000', border: ' 1px solid #000', outline: 'solid #000 1px', boxShadow: '0 0 40px 40px rgb(255, 255, 255) inrgb(255, 255, 255) 0 0 0 0 rgb(255, 255, 255)' }} className="btn third">Read More</div>
                         </Link>
 
                     </div>
