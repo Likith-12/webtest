@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div>
       <div className="background">
-        <div className="container">
+        <div className="contact-container">
           <div className="screen">
             <div className="screen_header">
               <div className="screen_header_left">
