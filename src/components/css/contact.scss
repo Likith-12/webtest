@@ -1,125 +1,243 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
-
-* {
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-font-smoothing:antialiased;
-	-moz-font-smoothing:antialiased;
-	-o-font-smoothing:antialiased;
-	font-smoothing:antialiased;
-	text-rendering:optimizeLegibility;
-}
-
-.container {
-    font-family:"Open Sans", Helvetica, Arial, sans-serif;
-	font-weight:300;
-	font-size: 12px;
-	line-height:30px;
-	color:#777;
-	width:600px;
-	margin:0 auto;
-    position:relative;
-    border-radius: 25px;
-}
-
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
-
-#contact {
-	background:#293462;
-	padding:25px;
-	margin:50px 0;
-    border-radius: 25px;
-}
-
-#contact h3 {
-	color: #f5655d;
+.background {
+	display: flex;
+	font-weight: 700;
+	letter-spacing: 1.4px;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 700px;
+  }
+  
+  .container {
+	flex: 0 1 950px;
+	margin: auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+  }
+  
+  .screen {
+	position: relative;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 25px 45px
+	  rgba(0, 0, 0, 0.1);
+	border: 1px solid
+	  rgba(255, 255, 255, 0.25);
+	border-right: 1px solid
+	  rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid
+	  rgba(255, 255, 255, 0.21);
+	border-radius: 15px;
+	// z-index: 1000;
+  }
+  
+  .screen:after {
+	content: "";
 	display: block;
-	font-size: 40px;
-	font-weight: 400;
-    margin-bottom: 10px;
-}
-
-#contact h4 {
-	margin:5px 0 15px;
-	display:block;
-	font-size:13px;
-}
-
-fieldset {
-	border: medium none !important;
-	margin: 0 0 10px;
-	min-width: 100%;
-	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	right: 20px;
+	bottom: 0;
+	border-radius: 15px;
+	z-index: -1;
+  }
+  
+  .screen_header {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+  }
+  
+  .screen_header_left {
+	margin-right: auto;
+  }
+  
+  .screen_header_button {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 3px;
+	border-radius: 8px;
+	background: white;
+  }
+  
+  .screen_header_button.close {
+	background: #ed1c6f;
+  }
+  
+  .screen_header_button.maximize {
+	background: #e8e925;
+  }
+  
+  .screen_header_button.minimize {
+	background: #74c54f;
+  }
+  
+  .screen_header_right {
+	display: flex;
+  }
+  
+  .screen_header_ellipsis {
+	width: 3px;
+	height: 3px;
+	margin-left: 2px;
+	border-radius: 8px;
+	background: #999;
+  }
+  
+  .screen_body {
+	display: flex;
+  }
+  
+  .screen_body_item {
+	flex: 1;
+	padding: 50px;
+  }
+  
+  .lt {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .app_title {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: auto;
+	margin-top: 0px;
+	color: #dce2e7;
+	font-size: 30px;
+  }
+  
+  .app_title:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 25px;
+	height: 4px;
+	/* background: #ea1d6f; */
+  }
+  
+  .app_contact {
+	margin-top: auto;
+	font-size: 18px;
+	color: #dce2e7;
+  }
+  
+  .app_form_group {
+	margin-bottom: 15px;
+  }
+  
+  .app_form_group.message {
+	margin-top: 40px;
+  }
+  
+  .app_form_group.buttons {
+	margin-bottom: 0;
+	text-align: right;
+  }
+  
+  .app_form_control {
 	width: 100%;
-}
-
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
-	width:100%;
-	border:1px solid #CCC;
-	background:#FFF;
-	margin:0 0 5px;
-	padding:10px;
-    border-radius: 5px;
-}
-
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
-	-webkit-transition:border-color 0.3s ease-in-out;
-	-moz-transition:border-color 0.3s ease-in-out;
-	transition:border-color 0.3s ease-in-out;
-	border:1px solid #AAA;
-}
-
-#contact textarea {
-	height:100px;
-	max-width:100%;
-  resize:none;
-}
-
-#contact button[type="submit"] {
-	cursor:pointer;
-	width:100%;
-	border:none;
-	background:#f5655d;
-	color:#FFF;
-	margin:0 0 5px;
-	padding:10px;
-	font-size:15px;
-    border-radius: 5px;
-}
-
-#contact button[type="submit"]:hover {
-	background:#4B8673;
-	-webkit-transition:background 0.3s ease-in-out;
-	-moz-transition:background 0.3s ease-in-out;
-	transition:background-color 0.3s ease-in-out;
-}
-
-#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-#contact input:focus, #contact textarea:focus {
-	outline:0;
-	border:1px solid #999;
-}
-::-webkit-input-placeholder {
- color:#888;
-}
-:-moz-placeholder {
- color:#888;
-}
-::-moz-placeholder {
- color:#888;
-}
-:-ms-input-placeholder {
- color:#888;
-}
-
-@media only screen and (max-width: 800px) 
-{
-    .container
-    {
-        width: 340px;
-    }
-}
+	padding: 10px 0;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #666;
+	color: #ddd;
+	font-size: 14px;
+	/* text-transform: uppercase; */
+	outline: none;
+	transition: border-color 0.2s;
+  }
+  
+  .app_form_control::placeholder {
+	color: #666;
+  }
+  
+  .app_form_control:focus {
+	border-bottom-color: #ddd;
+  }
+  
+  .app_form_button {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	outline: none;
+  }
+  
+  .app_form_button:hover {
+	color: rgb(194, 178, 178);
+  }
+  
+  .credits {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	color: #ffa4bd;
+	font-size: 16px;
+	font-weight: normal;
+  }
+  
+  .credits-link {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+  }
+  
+  .dribbble {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+  }
+  
+  @media screen and (max-width: 520px) {
+	.container {
+	  padding: 10px;
+	}
+	.screen_body {
+	  flex-direction: column;
+	}
+  
+	.screen_body_item.left {
+	  margin-bottom: 30px;
+	}
+  
+	.app_title {
+	  flex-direction: row;
+	}
+  
+	.app_title span {
+	  margin-right: 12px;
+	}
+  
+	.app_title:after {
+	  display: none;
+	}
+  }
+  
+  @media screen and (max-width: 600px) {
+	.screen_body {
+	  padding: 40px;
+	}
+  
+	.screen_body_item {
+	  padding: 0;
+	}
+  }
+  
+  @media screen and (max-width:480px)
+  {
+	  .background{
+		  width: 380px;
+	  }
+  }

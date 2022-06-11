@@ -11,9 +11,9 @@ function Footer(){
     const [show,setshow] = useState(true);
 
     return(
-        <div className="footer">
+        <div className="footer" onClick={() => {setshow(false);}}>
         <div>
-        {show?(<div className="footer_text" onClick={() => {setshow(false);}}>
+        {show?(<div className="footer_text">
             FEEL FREE TO HIT US UP
             </div>):(<div className="contact"><Contact/></div>)}    
         </div>
