@@ -6,7 +6,7 @@
 }
 
 .head {
-  margin:15px;
+  margin: 15px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 .head-info {
-  margin:10px;
+  margin: 10px;
   margin-top: 40px;
   padding: 5px;
   display: flex;
@@ -63,11 +63,11 @@
 
 @media screen and (max-width: 832px) {
   .head-info {
-    height:30vh;
-    margin:30px;
+    height: 30vh;
+    margin: 30px;
   }
-  .head{
-    height:130vh;
+  .head {
+    height: 130vh;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -81,16 +81,16 @@
 //     justify-content: space-between;
 //     min-height: 100vh;
 //   }
-  
+
 // }
 
 .article {
-  height: 60vh;
+  // height: 60vh;
   width: 80vw;
   margin: auto;
   margin-top: 100px;
   padding: 5px;
-  margin:10px;
+  margin: 10px;
   flex-wrap: wrap;
 }
 
@@ -99,4 +99,8 @@
   font-size: 1.5rem;
   color: white;
   line-height: 2;
+}
+
+.ql-container {
+  min-height: 200px;
 }

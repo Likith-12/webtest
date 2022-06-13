@@ -7,13 +7,14 @@ import './css/blog.scss'
 
 function Blog() {
     let match = useRouteMatch("/blog/:slug");
+    console.log(new Date().toDateString());
 
     const [blog, setBlog] = useState([])
     useEffect(() => {
         fetchBlog();
     }, [])
     const fetchBlog = async () => {
-        firestore.collection("blogs").where("slug", "==", match.params.slug).get().then((querySnapshot) => {
+        firestore.collection("blogs").where("slug", "==", match.params.slug).where("publish", "==", true).get().then((querySnapshot) => {
             querySnapshot.forEach(element => {
                 var data = element.data();
                 setBlog(data);
@@ -30,7 +31,8 @@ function Blog() {
                 </div>
                 <div className="head-info">
                     <h1 style={{ color: "red" }}>{blog.name}</h1>
-                    <h3>{blog.date}</h3>
+                    <h3>{blog?.date
+                    }</h3>
                 </div>
             </div>
             <div className="article">

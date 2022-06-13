@@ -1,16 +1,19 @@
 import React from 'react';
 import './css/card_event.scss'
-import Tilt from './Tilt'
+import Tilt from './Card_tilt'
+import './css/tilt.scss'
+
 
 function Card_event({ data }) {
-  const options = {
-    scale: 1.05,
-    speed: 500,
-    max: 15
-  };
+
   return (
     <>
-      <Tilt className="container" options={options} data={data} />
+      <Tilt style={{ height: '480px' }}>
+        <h2>{data.name}</h2>
+        <div className="card__text">
+          <p>{data.desc}</p>
+        </div>
+      </Tilt>
     </>
   )
 }

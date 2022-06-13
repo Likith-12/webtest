@@ -5,7 +5,6 @@ import Footer from '../components/Footer'
 import Background from '../components/Background'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import Logo from '../components/Logo'
-import Letter from '../components/Letter'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'

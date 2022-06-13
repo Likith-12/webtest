@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import firestore from '../firebase';
 import './css/slider.scss'
 import InstaCards from './InstaCards';
-import Card from '../components/Card'
 import Card_event from './Card_event';
 import { Link } from 'react-router-dom'
+import Card_blog from './Card_blog';
 
 
 const Slider = () => {
@@ -26,7 +26,7 @@ const Slider = () => {
     }, [])
 
     const FetchEvents = (lim) => {
-        firestore.collection("events").limit(lim).get().then((querySnapshot) => {
+        firestore.collection("events").where("publish", "==", true).limit(lim).get().then((querySnapshot) => {
             querySnapshot.forEach(element => {
                 var data = element.data();
                 setEvents(arr => [...arr, data]);
@@ -35,7 +35,7 @@ const Slider = () => {
 
     }
     const FetchSeries = (lim) => {
-        firestore.collection("series").limit(lim).get().then((querySnapshot) => {
+        firestore.collection("series").where("publish", "==", true).limit(lim).get().then((querySnapshot) => {
             querySnapshot.forEach(element => {
                 var data = element.data();
                 const uri = data.url
@@ -53,7 +53,7 @@ const Slider = () => {
 
     }
     const FetchBlogs = (lim) => {
-        firestore.collection("blogs").limit(lim).get().then((querySnapshot) => {
+        firestore.collection("blogs").where("publish", "==", true).limit(lim).get().then((querySnapshot) => {
             querySnapshot.forEach(element => {
                 var data = element.data();
                 setBlogs(arr => [...arr, data]);
@@ -120,13 +120,8 @@ const Slider = () => {
                     <div className='section-content'>
                         <div className='inner'>
                             {
-                                blogs.map((blog, index) => {
-                                    return (
-                                        <Card data={blog} key={index} />
-                                    )
-                                })
+                                blogs.map((blog, index) => <Card_blog key={index} data={blog} />)
                             }
-
                         </div>
                         <Link to='/blogs'>
 
