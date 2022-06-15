@@ -15,7 +15,6 @@ const BurgerMenu = ({ state }) => {
     let link2 = useRef(null)
     let link3 = useRef(null)
     let link4 = useRef(null)
-    let socialMedia = useRef(null)
     useEffect(() => {
         if (state.clicked === false) {
             // menu.style.display = "none"
@@ -31,7 +30,7 @@ const BurgerMenu = ({ state }) => {
                 duration: 1,
                 css: { display: 'none' }
             })
-        } else if (state.clicked === true || state.clicked === true && state.initial === null) {
+        } else if (state.clicked === true || (state.clicked === true && state.initial === null)) {
             // menu.style.display = "flex"
             gsap.to(menu, {
                 duration: 0,
@@ -98,11 +97,11 @@ const BurgerMenu = ({ state }) => {
                             </ul>
                         </nav>
                     </div>
-                    <div ref={el => { socialMedia = el }} className="social-media">
+                    <div className="social-media">
                         {/* <h3>Follow us on:</h3> */}
                         <a href='https://www.instagram.com/accounts/login/?next=/ipf.nitc/' ref={el => { link1 = el }}><i className="fa-brands fa-instagram fa-2xl"></i></a>
-                        <a href='https://m.facebook.com/ipfnitc/?_rdr'ref={el => { link2 = el }}><i className="fa-brands fa-facebook fa-2xl"></i></a>
-                        <a ref={el => { link3 = el }}><i className="fa-brands fa-twitter fa-2xl"></i></a>
+                        <a href='https://m.facebook.com/ipfnitc/?_rdr' ref={el => { link2 = el }}><i className="fa-brands fa-facebook fa-2xl"></i></a>
+                        <a ref={el => { link3 = el }} href='#'><i className="fa-brands fa-twitter fa-2xl"></i></a>
                         <a href='https://www.linkedin.com/company/industrial-and-planning-forum-nit-calicut/' ref={el => { link4 = el }}><i className="fa-brands fa-linkedin fa-2xl"></i></a>
                     </div>
                 </div>

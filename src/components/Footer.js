@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import Footer_ring from '../components/Footer_ring'
+import FooterRing from './FooterRing'
 import Contact from '../components/Contact';
 
 import './css/footer.scss'
@@ -22,7 +22,7 @@ function Footer() {
                     <span>&copy;</span> {new Date().getFullYear()} IPF All Rights Reserved</span>
             </div>
             <div className="footer_animation_ring">
-                <Footer_ring />
+                <FooterRing />
             </div>
         </div>
     );

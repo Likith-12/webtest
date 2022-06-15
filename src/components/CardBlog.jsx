@@ -1,13 +1,13 @@
 import React from 'react';
-import Tilt from './Card_tilt'
+import Tilt from './CardTilt'
 import './css/displayCard.scss'
-function Card_blog({ data }) {
+function CardBlog({ data }) {
 
     return (
         <>
-            <Tilt style={{ height: '400px' }}>
+            <Tilt style={{ height: '480px' }}>
                 <div className="card-image">
-                    <img src={data.image} alt="blog-image" />
+                    <img src={data.image} alt="blog" />
                 </div>
 
                 <div className="card-title">
@@ -22,4 +22,4 @@ function Card_blog({ data }) {
     )
 }
 
-export default Card_blog;
+export default CardBlog;

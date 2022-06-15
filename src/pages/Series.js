@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import firestore from '../firebase';
+import { firestore } from '../firebase';
 import InstaCards from '../components/InstaCards.js';
 import '../components/css/instacards.scss'
 
@@ -15,8 +15,6 @@ function Series() {
   }
   useEffect(() => {
     FetchSeries()
-    console.log(series);
-
   }, [])
 
   return (

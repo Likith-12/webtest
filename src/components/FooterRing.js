@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../assets/ipf_400-100.jpg';
 import './css/footer_ring.scss'
 
-function Footer_ring() {
+function FooterRing() {
     return (
         <div className="footer_ring">
             <div className="ring">
@@ -33,4 +33,4 @@ function Footer_ring() {
     )
 }
 
-export default Footer_ring
+export default FooterRing

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.bubble.css';
-import firestore from '../firebase';
+import { firestore } from '../firebase';
 import './css/blog.scss'
 
 function Blog() {
@@ -20,8 +20,6 @@ function Blog() {
                 setBlog(data);
             });
         })
-
-
     }
     return (
         <div className="blog-container">

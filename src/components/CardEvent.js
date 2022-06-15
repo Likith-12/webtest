@@ -1,10 +1,10 @@
 import React from 'react';
 import './css/card_event.scss'
-import Tilt from './Card_tilt'
+import Tilt from './CardTilt'
 import './css/tilt.scss'
 
 
-function Card_event({ data }) {
+function CardEvent({ data }) {
 
   return (
     <>
@@ -18,4 +18,4 @@ function Card_event({ data }) {
   )
 }
 
-export default Card_event;
+export default CardEvent;

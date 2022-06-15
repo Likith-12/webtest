@@ -137,7 +137,7 @@
 .active .section-content {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   pointer-events: all;
   opacity: 1;
 }

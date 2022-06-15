@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import firestore from '../firebase';
+import { firestore } from '../firebase';
 import './css/slider.scss'
 import InstaCards from './InstaCards';
-import Card_event from './Card_event';
+import CardEvent from './CardEvent';
 import { Link } from 'react-router-dom'
-import Card_blog from './Card_blog';
+import CardBlog from './CardBlog';
 
 
 const Slider = () => {
@@ -40,11 +40,7 @@ const Slider = () => {
                 var data = element.data();
                 const uri = data.url
                 if (window.innerWidth < 500) {
-                    uri.map((u, index) => {
-                        if (index == 0) {
-                            setSeries([u])
-                        }
-                    })
+                    uri.map((u, index) => index === 0 && setSeries([u]))
                 } else {
                     setSeries(data.url)
                 }
@@ -69,15 +65,14 @@ const Slider = () => {
                 <li
                     style={{ background: `#A40000`, backgroundPosition: '50% 30%' }}
                     role="button"
-                    className={active == 0 ? 'active' : ''}
+                    className={active === 0 ? 'active' : ''}
                     onClick={() => setActive(0)}
                 >
                     <h3>Events</h3>
                     <div className='section-content'>
                         <div className='inner'>
-
                             {
-                                events.map((event, index) => <Card_event key={index} data={event} />)
+                                events.map((event, index) => <CardEvent key={index} data={event} />)
                             }
                         </div>
                         <Link to='/events'>
@@ -89,7 +84,7 @@ const Slider = () => {
                 <li
                     style={{ background: `white`, backgroundPosition: '50% 30%' }}
                     role="button"
-                    className={active == 1 ? 'active' : ''}
+                    className={active === 1 ? 'active' : ''}
                     onClick={() => setActive(1)}
                 >
 
@@ -112,7 +107,7 @@ const Slider = () => {
                 <li
                     style={{ background: `#04724D` }}
                     role="button"
-                    className={active == 2 ? 'active' : ''}
+                    className={active === 2 ? 'active' : ''}
                     onClick={() => setActive(2)}
                 >
 
@@ -120,7 +115,7 @@ const Slider = () => {
                     <div className='section-content'>
                         <div className='inner'>
                             {
-                                blogs.map((blog, index) => <Card_blog key={index} data={blog} />)
+                                blogs.map((blog, index) => <CardBlog key={index} data={blog} />)
                             }
                         </div>
                         <Link to='/blogs'>

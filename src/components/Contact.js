@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({});
-  const [message, setMessage] = useState("");
 
   const handleInput = e => {
     const copyFormData = { ...formData };
@@ -26,11 +25,9 @@ const Contact = () => {
         }
       );
       const json = await response.json();
-      console.log("Success:", JSON.stringify(json));
-      setMessage("Success");
+      console.log("Success:", JSON.stringify(json))
     } catch (error) {
-      console.error("Error:", error);
-      setMessage("Error");
+      console.error("Error");
     }
   };
   return (

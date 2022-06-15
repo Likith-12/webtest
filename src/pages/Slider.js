@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import firestore from '../firebase';
+import { firestore } from '../firebase';
 import Slider_event from '../components/Slider_event';
 import './css/slider.scss'
 

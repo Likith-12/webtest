@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import firestore from '../firebase';
+import { firestore } from '../firebase';
 import { Link } from 'react-router-dom';
 import './css/blogs.scss'
-import Card_event from '../components/Card_event';
-import Card_blog from '../components/Card_blog';
+import CardBlog from '../components/CardBlog';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
     useEffect(() => {
@@ -27,8 +26,8 @@ const Blogs = () => {
                 {blogs.map((post, index) => {
                     return (
                         <Link key={index} to={`/blog/${post.slug}`}>
-                            <Card_blog data={post} />
-                            {/* <Card_event data={post} />
+                            <CardBlog data={post} />
+                            {/* <CardEvent data={post} />
                             <Card data={post} /> */}
                         </Link>
                     )

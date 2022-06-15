@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
-import firestore from '../firebase';
+import { firestore } from '../firebase';
 import "./css/events.scss";
-import Card_event from '../components/Card_event';
+import CardEvent from '../components/CardEvent';
 
 const Events = () => {
     const [events, setEvents] = useState([])
     useEffect(() => {
         FetchEvents()
-        console.log(events);
     }, [])
     const FetchEvents = () => {
         firestore.collection("events").get().then((querySnapshot) => {
@@ -24,7 +23,7 @@ const Events = () => {
                 events.map((data, index) => {
                     return (
                         <div key={index} className='card_event'>
-                            <Card_event data={data} />
+                            <CardEvent data={data} />
                         </div>
                     )
                 })

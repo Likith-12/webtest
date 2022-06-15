@@ -1,8 +1,8 @@
-import React, { Children, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './css/tilt.scss'
 import VanillaTilt from 'vanilla-tilt';
 
-function Card_Tilt(props) {
+function CardTilt(props) {
     const { children, ...rest } = props;
     const tilt = useRef(null);
 
@@ -24,4 +24,4 @@ function Card_Tilt(props) {
     )
 }
 
-export default Card_Tilt;
+export default CardTilt;

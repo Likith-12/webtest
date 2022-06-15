@@ -1,12 +1,9 @@
-import React, { useRef, useState, useEffect, Suspense } from 'react'
-// import Slider from '../pages/Slider'
+import React, { Suspense } from 'react'
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
 import Background from '../components/Background'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import Logo from '../components/Logo'
-import gsap from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './css/home.scss'
 import arrow1 from '../assets/arrow1.png';
 import arrow2 from '../assets/arrow2.png';
@@ -17,40 +14,6 @@ import { NoToneMapping } from 'three'
 
 
 const Home = () => {
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const { innerWidth: width, innerHeight: height } = window;
-
-    const staggerReveal = (node3, node1, node2, node) => {
-        gsap.from([node3, node1, node2], {
-            duration: 0.8,
-            opacity: 0,
-            y: "20%",
-            ease: 'power3.inOut',
-            stagger: {
-                amount: 0.1
-            },
-            scrollTrigger: {
-                trigger: node
-            }
-
-        })
-    };
-
-    function Camera(props) {
-        const ref = useRef()
-        const set = useThree(state => state.set)
-        // Make the camera known to the system
-        useEffect(() => void set({ camera: ref.current }), [])
-        // Update it every frame
-        useFrame(() => ref.current.updateMatrixWorld())
-        return <perspectiveCamera ref={ref} {...props} />
-    }
-
-    const rotateModel = () => {
-
-    }
     return (
         <>
             <div className="home" id="home">
@@ -62,7 +25,7 @@ const Home = () => {
                                 <OrbitControls maxAzimuthAngle={4 * Math.PI / 6} minAzimuthAngle={Math.PI / 3} maxPolarAngle={4 * Math.PI / 6} minPolarAngle={Math.PI / 3} enablePan={false} enableRotate={true} enableZoom={false} />
                                 <ambientLight intensity={1} />
                                 <Suspense fallback={null}>
-                                    <Logo scale={0.8} position={[0, -4, 0]} onClick={rotateModel} />
+                                    <Logo scale={0.8} position={[0, -4, 0]} />
                                 </Suspense>
                             </Canvas>
                         </button>
