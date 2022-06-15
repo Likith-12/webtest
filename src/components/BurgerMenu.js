@@ -11,6 +11,7 @@ const BurgerMenu = ({ state }) => {
     let line2 = useRef(null)
     let line3 = useRef(null)
     let line4 = useRef(null)
+    let line5 = useRef(null)
     let link1 = useRef(null)
     let link2 = useRef(null)
     let link3 = useRef(null)
@@ -42,7 +43,7 @@ const BurgerMenu = ({ state }) => {
                 height: "100%"
             })
             staggerReveal(revealMenuBg, revealMenu);
-            staggerRevealLink(line1.current, line2.current, line3.current, line4.current)
+            staggerRevealLink(line1.current, line2.current, line3.current, line4.current, line5.current)
             staggerRevealLink(link1, link2, link3, link4)
 
         }
@@ -61,19 +62,19 @@ const BurgerMenu = ({ state }) => {
 
         })
     }
-    const staggerRevealLink = (node1, node2, node3, node4) => {
-        gsap.from([node1, node2, node3, node4], {
+
+    const staggerRevealLink = (node1, node2, node3, node4, node5) => {
+        gsap.from([node1, node2, node3, node4, node5], {
             y: 60,
             duration: 1,
             delay: 0.5,
             opacity: 0,
-            ease: 'power3.inOut',
+            ease: "power3.inOut",
             stagger: {
-                amount: 0.3
-            }
-
-        })
-    }
+                amount: 0.3,
+            },
+        });
+    };
     return (
         <div ref={el => { menu = el }} className="menu">
             <div ref={el => { revealMenuBg = el }} className="menu-bg-layer"></div>
@@ -86,13 +87,16 @@ const BurgerMenu = ({ state }) => {
                                     <Link to="/" ref={line1}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Blogs" ref={line2}>Blogs</Link>
+                                    <Link to="/blogs" ref={line2}>Blogs</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Events" ref={line3}>Events</Link>
+                                    <Link to="/events" ref={line3}>Events</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Series" ref={line4}>Series</Link>
+                                    <Link to="/series" ref={line4}>Series</Link>
+                                </li>
+                                <li>
+                                    <Link to="/team" ref={line5}>Team</Link>
                                 </li>
                             </ul>
                         </nav>

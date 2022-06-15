@@ -53,7 +53,7 @@ function App() {
           <Route path="/events">
             <Events />
           </Route>
-          <Route path="/team">
+          <Route path="/teams">
             <Team />
           </Route>
           <Route path="/series">
