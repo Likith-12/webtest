@@ -71,14 +71,6 @@ const Home = () => {
 
                     </div>
                 </session>
-                {/* <div className="heading">
-                    <h1 ref={el => { aboutHeadRef = el }}>About us</h1>
-            </div> */}
-                {/* <div className="logo">
-                    <Letter letter='I'></Letter>
-                    <Letter letter='P' ></Letter>
-                    <Letter letter='F' ></Letter>
-                </div> */}
                 <div className="slider">
                     <Slider />
                 </div>
