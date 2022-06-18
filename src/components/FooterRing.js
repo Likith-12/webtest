@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/ipf_400-100.jpg';
+import logo from '../assets/logo.png';
 import './css/footer_ring.scss'
 
 function FooterRing() {
