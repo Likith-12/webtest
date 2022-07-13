@@ -1,11 +1,18 @@
 import React from 'react';
 import Tilt from './CardTilt'
 import './css/displayCard.scss'
+import { Link } from 'react-router-dom';
 function CardBlog({ data }) {
 
     return (
-        <>
-            <Tilt style={{ height: '480px' }}>
+     
+        <Link  to={`/blog/${data.slug}`}>
+            <div className='card__wrapper'>
+            <Tilt style={{ height: '500px',
+              }}>
+        
+        
+                
                 <div className="card-image">
                     <img src={data.image} alt="blog" />
                 </div>
@@ -17,8 +24,12 @@ function CardBlog({ data }) {
                 </div>
                 <div style={{ color: "white" }}>
                 </div>
+                
             </Tilt>
-        </>
+            </div>
+                
+            </Link>
+        
     )
 }
 

@@ -142,7 +142,8 @@ session {
 	flex-wrap: wrap;
 	flex-direction: column;
 	height: 100vh;
-	margin-top: 20px;
+	margin: none 20px;
+	padding: 30px;
 	.info {
 		width: 100%;
 		display: flex;
@@ -152,8 +153,11 @@ session {
 		flex-wrap: wrap;
 		color: white;
 		letter-spacing: 1.5;
+		text-align: center;
+		line-height: 1.3;
 		.heading {
 			font-size: 40px;
+			margin-bottom: 10px;
 			color: white;
 		}
 		.content {
@@ -166,7 +170,7 @@ session {
 			padding-left: 2px;
 		}
 	}
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 768px) {
 		.info {
 			width: 90%;
 			.content {

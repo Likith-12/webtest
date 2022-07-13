@@ -25,11 +25,10 @@ const Blogs = () => {
             <div className="blogs-container">
                 {blogs.map((post, index) => {
                     return (
-                        <Link key={index} to={`/blog/${post.slug}`}>
+
                             <CardBlog data={post} />
-                            {/* <CardEvent data={post} />
-                            <Card data={post} /> */}
-                        </Link>
+                           
+                      
                     )
                 }
                 )}

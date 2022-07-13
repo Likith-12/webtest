@@ -218,6 +218,8 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   white-space: nowrap;
+  margin: auto;
+  margin-top: 20px;
 
   &:hover,
   &:focus {
@@ -262,3 +264,12 @@
 .cardlists ::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #8f71d4, #4d2b9c 1px, #5726b9 0, #6d28f7);
 }
+
+@media screen and (max-width: 768px) {
+  .cardlists {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}
+  
+
