@@ -8,6 +8,7 @@ a {
     padding: 4rem;
     padding-bottom: 20px;
     overflow-x: scroll;
+
 }
 .cardlists ::-webkit-scrollbar {
     width: 10px;
@@ -35,6 +36,7 @@ a {
     scroll-snap-align: start;
     clear: both;
     position: relative;
+    margin: 0 auto;
 }
 .cards:focus-within ~ .cards,
 .cards:hover ~ .cards {
