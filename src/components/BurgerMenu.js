@@ -96,7 +96,7 @@ const BurgerMenu = ({ state }) => {
                                     <Link to="/series" ref={line4}>Series</Link>
                                 </li>
                                 <li>
-                                    <Link to="/team" ref={line5}>Team</Link>
+                                    <Link to="/teams" ref={line5}>Team</Link>
                                 </li>
                             </ul>
                         </nav>
