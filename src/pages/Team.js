@@ -5,19 +5,38 @@ import "./css/team.scss";
 
 const Team = () => {
   const teams = [
-    "Aditi",
-    "Ashwin Chundolly",
-    "Ashwin S",
-    "Athul Baburaj",
-    "Claret Thanikkal",
-    "Jeswell Mathew",
-    "Naveen Nair",
-    "Sameer Kither Muhamed",
-    "Sanath santhosh",
-    "Sneha",
-    "Sreeroop S K",
-    "Srijith Padmesh",
-    "Vinay Kuruppath"
+    
+    "Abhinave M S",
+    "Aditya Sri Yerram", 
+    "Amalkrishna A S",
+    "Athul",
+    "Bichu S Kumar",
+    "Chirag Khurana",
+    "Harish Haroon",
+    "J Sivsankar",
+    "Jiyad Jaleel",
+    "Joshua",
+    "Jyochith P Anil",
+    "Kalyani Menon",
+    "Naazni",
+    "Nandhana Vasudevan",
+    "P Anantha Padmanabhan",
+    "P Sandra",
+    "Rajath V",
+    "Razeen Arif",
+    "Rebecca Jacob",
+    "Sai Krishna",
+    "Saianivesh",
+    "Sandhra M Lal",
+    "Sanil Mishra",
+     "Sanjana D V",
+     "Shivang Manoj Kumar",
+     "Sidharth C P",
+     "Sohul Rajeev",
+     "Sudarshan M",
+     "T V Nithin",
+     "Vysakh Vinod Nair"
+
   ]
   return (
     <div className='wrapper'>
@@ -27,7 +46,7 @@ const Team = () => {
         <h2><span>SENIOR</span> <span> EXECUTIVES</span></h2>
         <div className="grid-container">
           {
-            teams.map((team) => <Member title={team} img__path={`https://keen-kirch-aeb81f.netlify.app/OC/${team.split(' ').join('_')}.webp`} color="green" />)
+            teams.map((team) => <Member title={team} img__path={`https://keen-kirch-aeb81f.netlify.app/exec-b20/${team.split(' ').join('_')}.jpg`} color="green" />)
           }
         </div>
 
