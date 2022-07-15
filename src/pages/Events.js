@@ -17,6 +17,7 @@ const Events = () => {
         })
     }
     return (
+      
         <div className='event-container'>
 
             {

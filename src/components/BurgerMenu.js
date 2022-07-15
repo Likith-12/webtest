@@ -14,7 +14,7 @@ const BurgerMenu = ({ state }) => {
     let line5 = useRef(null)
     let link1 = useRef(null)
     let link2 = useRef(null)
-    let link3 = useRef(null)
+    // let link3 = useRef(null)
     let link4 = useRef(null)
     useEffect(() => {
         if (state.clicked === false) {
@@ -44,7 +44,7 @@ const BurgerMenu = ({ state }) => {
             })
             staggerReveal(revealMenuBg, revealMenu);
             staggerRevealLink(line1.current, line2.current, line3.current, line4.current, line5.current)
-            staggerRevealLink(link1, link2, link3, link4)
+            // staggerRevealLink(link1, link2, link3, link4)
 
         }
     }, [state])
@@ -96,7 +96,7 @@ const BurgerMenu = ({ state }) => {
                                     <Link to="/series" ref={line4}>Series</Link>
                                 </li>
                                 <li>
-                                    <Link to="/team" ref={line5}>Team</Link>
+                                    <Link to="/teams" ref={line5}>Team</Link>
                                 </li>
                             </ul>
                         </nav>
@@ -105,7 +105,7 @@ const BurgerMenu = ({ state }) => {
                         {/* <h3>Follow us on:</h3> */}
                         <a href='https://www.instagram.com/accounts/login/?next=/ipf.nitc/' ref={el => { link1 = el }}><i className="fa-brands fa-instagram fa-2xl"></i></a>
                         <a href='https://m.facebook.com/ipfnitc/?_rdr' ref={el => { link2 = el }}><i className="fa-brands fa-facebook fa-2xl"></i></a>
-                        <a ref={el => { link3 = el }} href='#'><i className="fa-brands fa-twitter fa-2xl"></i></a>
+                        
                         <a href='https://www.linkedin.com/company/industrial-and-planning-forum-nit-calicut/' ref={el => { link4 = el }}><i className="fa-brands fa-linkedin fa-2xl"></i></a>
                     </div>
                 </div>
