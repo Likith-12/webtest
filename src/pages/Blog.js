@@ -35,6 +35,7 @@ function Blog() {
             </div>
             <div className="article">
                 <ReactQuill theme="bubble" value={blog.content} readOnly={true} />
+                
 
             </div>
         </div>

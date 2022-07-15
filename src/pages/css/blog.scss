@@ -65,6 +65,7 @@
   .head-info {
     height: 30vh;
     margin: 30px;
+    
   }
   .head {
     height: 130vh;
@@ -92,6 +93,7 @@
   padding: 5px;
   margin: 10px;
   flex-wrap: wrap;
+  
 }
 
 .article p {
@@ -105,18 +107,21 @@
   min-height: 200px;
 }
 
-@media screen and (max-width:480px)
+@media screen and (max-width:680px)
 {
 
   .head
   {
     height: 100vh;
+    
   }
   .head-img
   {
     width: 90vw;
-    height: 40vh;
+    height: 50vh;
+    min-height: 200px;
     margin-top: -30px;
+    
   }
 
   .head-img img
@@ -125,6 +130,13 @@
   }
   .head-info
   {
-    margin-top: 0px;
+    margin-top: 40px;
+  }
+  
+}
+@media  screen and (max-width: 668px) {
+  .article p{
+    text-indent: 00px;
   }
 }
+  
