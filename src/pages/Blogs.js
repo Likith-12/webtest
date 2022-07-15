@@ -25,9 +25,9 @@ const Blogs = () => {
             <div className="blogs-container">
                 {blogs.map((post, index) => {
                     return (
-
-                            <CardBlog data={post} />
-                           
+                          <div className='blog'>
+                            <CardBlog data={post}/>
+                           </div>  
                       
                     )
                 }

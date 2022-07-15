@@ -104,3 +104,27 @@
 .ql-container {
   min-height: 200px;
 }
+
+@media screen and (max-width:480px)
+{
+
+  .head
+  {
+    height: 100vh;
+  }
+  .head-img
+  {
+    width: 90vw;
+    height: 40vh;
+    margin-top: -30px;
+  }
+
+  .head-img img
+  {
+    margin-left: 20px;
+  }
+  .head-info
+  {
+    margin-top: 0px;
+  }
+}
