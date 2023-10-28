@@ -5,6 +5,9 @@ import Background from '../components/Background'
 import { Canvas } from '@react-three/fiber'
 import Logo from '../components/Logo'
 import './css/home.scss'
+import about from '../assets/about.jpg';
+import contact from '../assets/contact.jpg';
+import logo from '../assets/logo.png';
 import arrow1 from '../assets/arrow1.png';
 import arrow2 from '../assets/arrow2.png';
 import arrow3 from '../assets/arrow3.png';
@@ -14,6 +17,59 @@ import { NoToneMapping } from 'three'
 
 
 const Home = () => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+    }
+    let nameRef = useRef(null)
+    let emailRef = useRef(null)
+    let messageRef = useRef(null)
+    let btnRef = useRef(null)
+    // let aboutImgRef = useRef(null)
+    // let aboutInfoRef = useRef(null)
+     let aboutRef = useRef(null)
+     let aboutHeadRef = useRef(null)
+    let contactImgRef = useRef(null)
+    let logoImgRef = useRef(null)
+    let arrow1ImgRef = useRef(null)
+    let arrow2ImgRef = useRef(null)
+    let arrow3ImgRef = useRef(null)
+    let contactHeadRef = useRef(null)
+    let contactInfoRef = useRef(null)
+    let contactRef = useRef(null)
+    gsap.registerPlugin(ScrollTrigger);
+
+    const { innerWidth: width, innerHeight: height } = window;
+    
+    const staggerReveal = (node3, node1, node2, node) => {
+        gsap.from([node3, node1, node2], {
+            duration: 0.8,
+            opacity: 0,
+            y: "20%",
+            ease: 'power3.inOut',
+            stagger: {
+                amount: 0.1
+            },
+            scrollTrigger: {
+                trigger: node
+            }
+
+        })
+    };
+    
+    function Camera(props) {
+        const ref = useRef()
+        const set = useThree(state => state.set)
+        // Make the camera known to the system
+        useEffect(() => void set({ camera: ref.current }), [])
+        // Update it every frame
+        useFrame(() => ref.current.updateMatrixWorld())
+        return <perspectiveCamera ref={ref} {...props} />
+    }
+
     return (
         <>
             <div className="home" id="home">
