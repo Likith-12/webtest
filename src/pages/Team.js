@@ -4,6 +4,16 @@ import Member from "../components/Member";
 import "./css/team.scss";
 
 const Team = () => {
+  firestore
+    .collection("events")
+    .get()
+    .then((querySnapshot) => {
+      console.log(querySnapshot)
+      querySnapshot.forEach((element) => {
+        var data = element.data();
+        console.log(data)
+      });
+    });
   const teams = [
     
     "Abhinave M S",
@@ -29,13 +39,13 @@ const Team = () => {
     "Saianivesh",
     "Sandhra M Lal",
     "Sanil Mishra",
-     "Sanjana D V",
-     "Shivang Manoj Kumar",
-     "Sidharth C P",
-     "Sohul Rajeev",
-     "Sudarshan M",
-     "T V Nithin",
-     "Vysakh Vinod Nair"
+    "Sanjana D V",
+    "Shivang Manoj Kumar",
+    "Sidharth C P",
+    "Sohul Rajeev",
+    "Sudarshan M",
+    "T V Nithin",
+    "Vysakh Vinod Nair"
 
   ]
   return (
@@ -49,125 +59,7 @@ const Team = () => {
             teams.map((team) => <Member title={team} img__path={`https://keen-kirch-aeb81f.netlify.app/exec-b20/${team.split(' ').join('_')}.jpg`} color="green" />)
           }
         </div>
-
       </div>
-      {/* <div className="outer-container bottom">
-        <h2><span>JUNIOR</span> <span> EXECUTIVES</span></h2>
-        <div className="grid-container">
-
-          <div className="row">
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-          </div>
-          <div className="row">
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-          </div>
-          <div className="row">
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-          </div>
-          <div className="row">
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-          </div>
-          <div className="row">
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-            <Member
-              title="member1"
-              desc="about info"
-              img__path="https://source.unsplash.com/random" color='green'
-            ></Member>
-          </div>
-        </div>
-
-      </div> */}
       <Footer />
     </div>
   );
